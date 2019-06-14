@@ -1,7 +1,7 @@
 ---
 title: loop()
-categories: [ "Functions" ]
-subCategories: [ "Sketch" ]
+categories: [ "Struktura" ]
+subCategories: [ "Szkic" ]
 ---
 
 
@@ -11,39 +11,42 @@ subCategories: [ "Sketch" ]
 = loop()
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-After creating a link:../setup[setup()] function, which initializes and sets the initial values, the `loop()` function does precisely what its name suggests, and loops consecutively, allowing your program to change and respond. Use it to actively control the Arduino board.
+=== Opis
+Po wykonaniu funkcji link:../setup[setup()], która inicjuje i ustawia wartości początkowe,
+ funkcja `loop()` (ang. pętla) robi dokładnie to co sugeruje jej nazwa,
+ czyli wykonuje się nieustannie, umożliwiając twojemu programowi na kontrolę zachowania się płytki Arduino poprzez
+ wykonywanie różnych działań i reagowanie na zdarzenia.
 [%hardbreaks]
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
+=== Przykładowy kod
 [source,arduino]
 ----
-int buttonPin = 3;
+int stykPrzycisku = 3;
 
-// setup initializes serial and the button pin
+// setup inicjuje łącze szeregowe oraz styk przycisku
 void setup() {
   Serial.begin(9600);
-  pinMode(buttonPin, INPUT);
+  pinMode(stykPrzycisku, INPUT);
 }
 
-// loop checks the button pin each time,
-// and will send serial if it is pressed
+// loop sprawdza przycisk za każdym razem
+// i przesyła przez łącze szeregowe jego stan
 void loop() {
-  if (digitalRead(buttonPin) == HIGH) {
+  if (digitalRead(stykPrzycisku) == HIGH) {
     Serial.write('H');
   }
   else {
@@ -55,15 +58,15 @@ void loop() {
 ----
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
-// SEE ALSO SECTION
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

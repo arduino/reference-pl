@@ -1,7 +1,7 @@
 ---
 title: setup()
-categories: [ "Functions" ]
-subCategories: [ "Sketch" ]
+categories: [ "Struktura" ]
+subCategories: [ "Szkic" ]
 ---
 
 
@@ -11,33 +11,33 @@ subCategories: [ "Sketch" ]
 = setup()
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-The `setup()` function is called when a sketch starts. Use it to initialize variables, pin modes, start using libraries, etc. The `setup()` function will only run once, after each powerup or reset of the Arduino board.
+=== Opis
+Funkcja `setup()` wywoływana jest na początku działania szkicu. Użyj jej aby zainicjować zmienne, ustawić tryby pracy styków, użyć bibliotek, itd. Funkcja `setup()` uruchamiana jest jeden raz, po włączeniu zasilania lub wyzerowaniu płytki Arduino.
 [%hardbreaks]
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
+=== Przykładowy kod
 
 [source,arduino]
 ----
-int buttonPin = 3;
+int stykPrzycisku = 3;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(buttonPin, INPUT);
+  pinMode(stykPrzycisku, INPUT);
 }
 
 void loop() {
@@ -46,15 +46,15 @@ void loop() {
 ----
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
-// SEE ALSO SECTION
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

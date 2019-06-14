@@ -1,78 +1,82 @@
 ---
 title: else
 categories: [ "Structure" ]
-subCategories: [ "Control Structure" ]
+subCategories: [ "Instrukcje sterujące" ]
 ---
+
+
+
+
 
 = if...else
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-The `if...else` allows greater control over the flow of code than the basic link:../if[if] statement, by allowing multiple tests to be grouped together. An `else` clause (if at all exists) will be executed if the condition in the `if` statement results in `false`. The `else` can proceed another `if` test, so that multiple, mutually exclusive tests can be run at the same time.
+=== Opis
+Instrukcja `if...else` (jeżeli/w przeciwnym razie) umożliwia większą kontrolę nad wykonywaniem programu niż podstawowa instrukcja link:../if[if], umożliwiając grupowanie wielu testów. Klauzula `else` (jeśli w ogóle istnieje) zostanie wykonana, jeśli warunek w instrukcji `if` będzie fałszywy. Polecenie `else` może wykonać kolejny test `if`, dzięki czemu można uruchomić jednocześnie wiele wzajemnie wykluczających się testów.
 [%hardbreaks]
 
-Each test will proceed to the next one until a true test is encountered. When a true test is found, its associated block of code is run, and the program then skips to the line following the entire if/else construction. If no test proves to be true, the default `else` block is executed, if one is present, and sets the default behavior.
+Każdy test przechodzi do następnego, dopóki nie zostanie napotkany wynik prawdziwy. Po znalezieniu prawdy wykonywany jest powiązany z nim blok kodu, a następnie program przeskakuje do linii następującej po całej konstrukcji if/else. Jeśli żaden test nie okaże się prawdziwy, wykonany zostaje domyślny blok `else`, jeśli jest obecny, co określa zachowanie domyślne.
 [%hardbreaks]
 
-Note that an `else if` block may be used with or without a terminating `else` block and vice versa. An unlimited number of such `else if` branches is allowed.
+Zauważ, że po bloku `else if` może być lub nie użyty zamykający blok `else` i odwrotnie. Dozwolona jest nieograniczona liczba takich gałęzi `else if`.
 
 [float]
-=== Syntax
+=== Składnia
 [source,arduino]
 ----
-if (condition1) {
-  // do Thing A
+if (warunek1) {
+  // wykonaj czynność A
 }
-else if (condition2) {
-  // do Thing B
+else if (warunek2) {
+  // wykonaj czynność B
 }
 else {
-  // do Thing C
+  // wykonaj czynność C
 }
 ----
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 [float]
-=== Example Code
-Below is an extract from a code for temperature sensor system
+=== Przykładowy kod
+Poniżej znajduje się wyciąg z kodu systemu czujników temperatury
 [source,arduino]
 ----
-if (temperature >= 70) {
-  // Danger! Shut down the system.
+if (temperatura >= 70) {
+  //Niebezpieczeństwo! Wyłącz system
 }
-else if (temperature >= 60) { // 60 <= temperature < 70
-  // Warning! User attention required.
+else if (temperatura >= 60 && temperatura < 70) {
+  //Ostrzeżenie! Wymagana jest uwaga użytkownika
 }
-else { // temperature < 60
-  // Safe! Continue usual tasks.
+else {
+  //Bezpiecznie! Kontynuuj zwykłe zadania...
 }
 ----
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
 
-// SEE ALSO SECTION BEGINS
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="language"]
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

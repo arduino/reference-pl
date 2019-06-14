@@ -1,7 +1,7 @@
 ---
 title: digitalWrite()
-categories: [ "Functions" ]
-subCategories: [ "Digital I/O" ]
+categories: [ "Funkcje" ]
+subCategories: [ "Cyfrowe We/Wy" ]
 ---
 
 
@@ -11,85 +11,85 @@ subCategories: [ "Digital I/O" ]
 = digitalWrite()
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-Write a `HIGH` or a `LOW` value to a digital pin.
+=== Opis
+Zapisuje wartość `HIGH` lub `LOW` do styku cyfrowego.
 
-If the pin has been configured as an `OUTPUT` with `pinMode()`, its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for `HIGH`, 0V (ground) for `LOW`.
+Jeśli styk skonfigurowany został jako wyjściowy (`OUTPUT` w poleceniu `pinMode ()`), jego napięcie zostanie ustawione na odpowiednią wartość: 5V (lub 3,3V na płytach 3,3V) dla stanu wysokiego (`HIGH`), 0V (masa) dla stanu niskiego (`LOW`).
 [%hardbreaks]
 
-If the pin is configured as an `INPUT`, `digitalWrite()` will enable (`HIGH`) or disable (`LOW`) the internal pullup on the input pin. It is recommended to set the `pinMode()` to `INPUT_PULLUP` to enable the internal pull-up resistor. See the digital pins tutorial for more information.
+Jeśli styk skonfigurowany jest jako `INPUT`,`digitalWrite() `włączy (`HIGH`) lub wyłączy (`LOW`) wewnętrzny rezystor podciągający dla tego styku. Zaleca się ustawienie `pinMode()` na `INPUT_PULLUP`, aby włączyć wewnętrzny rezystor podciągający. Więcej informacji można znaleźć w samouczku dotyczącym styków cyfrowych.
 [%hardbreaks]
 
-If you do not set the `pinMode()` to `OUTPUT`, and connect an LED to a pin, when calling `digitalWrite(HIGH)`, the LED may appear dim. Without explicitly setting `pinMode()`, `digitalWrite()` will have enabled the internal pull-up resistor, which acts like a large current-limiting resistor.
+Jeśli nie ustawisz `pinMode()` na `OUTPUT` i podłączysz diodę świecącą do takiego styku, po wywoływaniu `digitalWrite(HIGH)`, świecenie diody może wydawać się za słabe. Bez jawnego ustawienia `pinMode()`, `digitalWrite()` uaktywni wewnętrzny rezystor podciągający, który zadziała jak duży rezystor ograniczający prąd.
 [%hardbreaks]
 
 [float]
-=== Syntax
-`digitalWrite(pin, value)`
+=== Składnia
+`digitalWrite(styk, wartość)`
 
 
 [float]
-=== Parameters
-`pin`: the Arduino pin number. +
-`value`: `HIGH` or `LOW`.
+=== Parametry
+`styk`: numer styku. +
+`wartość`: `HIGH` lub `LOW`.
 
 
 [float]
-=== Returns
-Nothing
+=== Wartości zwracane
+Nic
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
-// Describe what the example code is all about and add relevant code   ►►►►► THIS SECTION IS MANDATORY ◄◄◄◄◄
-The code makes the digital pin 13 an `OUTPUT` and toggles it by alternating between `HIGH` and `LOW` at one second pace.
+=== Przykładowy kod
+// Dodaj przykładowy kod i opisz jego działanie   ►►►►► NINIEJSZA SEKCJA JEST OBOWIĄZKOWA ◄◄◄◄◄
+Kod ustawia cyfrowy styk 13 jako wyjście (`OUTPUT`) i przełącza go na przemian między stanem wysokim (`HIGH`) a niskim (`LOW`) co jedną sekundę.
 
 [source,arduino]
 ----
 void setup() {
-  pinMode(13, OUTPUT);    // sets the digital pin 13 as output
+  pinMode(13, OUTPUT);    // ustawia styk cyfrowy nr 13 jak wyjście
 }
 
 void loop() {
-  digitalWrite(13, HIGH); // sets the digital pin 13 on
-  delay(1000);            // waits for a second
-  digitalWrite(13, LOW);  // sets the digital pin 13 off
-  delay(1000);            // waits for a second
+  digitalWrite(13, HIGH); // włącza styk cyfrowy nr 13
+  delay(1000);            // czeka jedną sekundę
+  digitalWrite(13, LOW);  // wyłącza styk cyfrowy nr 13
+  delay(1000);            // czeka jedną sekundę
 }
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-The analog input pins can be used as digital pins, referred to as A0, A1, etc. The exception is the Arduino Nano, Pro Mini, and Mini's A6 and A7 pins, which can only be used as analog inputs.
+=== Uwagi i ostrzeżenia
+Styki wejść analogowych mogą być używane jako styki cyfrowe, nazwane A0, A1, itp. Wyjątkiem są styki A6 i A7 Arduino Nano, Pro Mini i Mini, które mogą być używane tylko jako wejścia analogowe.
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
-// SEE ALSO SECTION
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="example"]
-* #EXAMPLE# http://arduino.cc/en/Tutorial/DigitalPins[Description of the digital pins^]
+* #PRZYKŁAD# http://arduino.cc/en/Tutorial/DigitalPins[Opis styków cyfrowych^]
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

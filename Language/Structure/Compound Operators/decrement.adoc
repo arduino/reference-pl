@@ -1,6 +1,6 @@
 ---
 title: "--"
-title_expanded: decrement
+title_expanded: zmniejszenie
 categories: [ "Structure" ]
 subCategories: [ "Compound Operators" ]
 ---
@@ -9,7 +9,7 @@ subCategories: [ "Compound Operators" ]
 
 
 
-= -- Decrement
+= -- Zmniejszenie
 
 
 // OVERVIEW SECTION STARTS
@@ -17,25 +17,25 @@ subCategories: [ "Compound Operators" ]
 --
 
 [float]
-=== Description
-Decrements the value of a variable by 1.
+=== Opis
+Zmniejsza wartość zmiennej o 1.
 [%hardbreaks]
 
 
 [float]
-=== Syntax
-`x--;  // decrement x by one and returns the old value of x` +
-`--x;  // decrement x by one and returns the new value of x`
+=== Składnia
+`x--;  // zwraca starą wartość x a następnie zmniejsza x o jeden` +
+`--x;  // zmniejsza x o jeden a następnie zwraca nową wartość x`
 
 
 [float]
-=== Parameters
-`x`: variable. Allowed data types: `int`, `long` (possibly unsigned).
+=== Parametry
+`x`: zmienna. Dozwolone typy danych: `int`, `long` (być może bez znaku).
 
 
 [float]
-=== Returns
-The original or newly decremented value of the variable.
+=== Wartości zwracane
+Oryginalna lub nowa, zmnejszona wartość zmiennej.
 
 --
 // OVERVIEW SECTION ENDS
@@ -47,13 +47,13 @@ The original or newly decremented value of the variable.
 --
 
 [float]
-=== Example Code
+=== Przykładowy kod
 
 [source,arduino]
 ----
 x = 2;
-y = --x;  // x now contains 1, y contains 1
-y = x--;  // x contains 0, but y still contains 1
+y = --x;  // teraz x ma wartość 1, y również ma wartość 1
+y = x--;  // x ma wartość 0, ale y ciągle ma wartość 1
 ----
 
 --
@@ -66,7 +66,7 @@ y = x--;  // x contains 0, but y still contains 1
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="language"]
 

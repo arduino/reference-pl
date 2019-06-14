@@ -1,7 +1,7 @@
 ---
 title: digitalRead()
-categories: [ "Functions" ]
-subCategories: [ "Digital I/O" ]
+categories: [ "Funkcje" ]
+subCategories: [ "Cyfrowe We/Wy" ]
 ---
 
 
@@ -11,82 +11,82 @@ subCategories: [ "Digital I/O" ]
 = digitalRead()
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-Reads the value from a specified digital pin, either `HIGH` or `LOW`.
+=== Opis
+Z określonego styku cyfrowego odczytuje wartość WYSOKI (`HIGH`) lub NISKI (` LOW`).
 [%hardbreaks]
 
 
 [float]
-=== Syntax
-`digitalRead(pin)`
+=== Składnia
+`digitalRead(styk)`
 
 
 [float]
-=== Parameters
-`pin`: the Arduino pin number you want to read
+=== Parametry
+`styk`: numer styku cyfrowego, który chcesz odczytać
 
 
 [float]
-=== Returns
-`HIGH` or `LOW`
+=== Wartości zwracane
+`HIGH` lub `LOW`
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
-// Describe what the example code is all about and add relevant code   ►►►►► THIS SECTION IS MANDATORY ◄◄◄◄◄
-Sets pin 13 to the same value as pin 7, declared as an input.
+=== Przykładowy kod
+// Dodaj przykładowy kod i opisz jego działanie   ►►►►► NINIEJSZA SEKCJA JEST OBOWIĄZKOWA ◄◄◄◄◄
+Na styku 13 ustawia na taką samą wartość jaką ma styk 7, zadeklarowany jako wejście.
 
 [source,arduino]
 ----
-int ledPin = 13;  // LED connected to digital pin 13
-int inPin = 7;    // pushbutton connected to digital pin 7
-int val = 0;      // variable to store the read value
+int stykDiody = 13;     // dioda świecąc podłączona do cyfrowego styku nr 13
+int stykWejscia = 7;    // przycisk podłączony do cyfrowego styku nr 7
+int wart = 0;           // zmienna przechowująca odczytaną wartość
 
 void setup() {
-  pinMode(ledPin, OUTPUT);  // sets the digital pin 13 as output
-  pinMode(inPin, INPUT);    // sets the digital pin 7 as input
+  pinMode(stykDiody, OUTPUT);    // ustawia cyfrowy styk nr 13 jako wejście
+  pinMode(stykWejscia, INPUT);   // ustawia cyfrowy styk nr 7 jako wejście
 }
 
 void loop() {
-  val = digitalRead(inPin);   // read the input pin
-  digitalWrite(ledPin, val);  // sets the LED to the button's value
+  wart = digitalRead(stykWejscia); // odczytuje styk wejściowy
+  digitalWrite(stykDiody, wart);   // ustawia stan diody świecącej na wartość odczytaną z przycisku
 }
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-If the pin isn't connected to anything, digitalRead() can return either HIGH or LOW (and this can change randomly).
+=== Uwagi i ostrzeżenia
+Jeśli styk nie jest do niczego podłączony, to digitalRead () może zwrócić wartość HIGH lub LOW (i może się to zmieniać losowo).
 
-The analog input pins can be used as digital pins, referred to as A0, A1, etc. The exception is the Arduino Nano, Pro Mini, and Mini's A6 and A7 pins, which can only be used as analog inputs.
+Analogowe styki wejściowe mogą być używane jako styki cyfrowe, nazwane A0, A1, itp. Wyjątkiem są styki A6 i A7 Arduino Nano, Pro Mini i Mini, które mogą być używane tylko jako wejścia analogowe.
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
-// SEE ALSO SECTION
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="example"]
-* #EXAMPLE# http://arduino.cc/en/Tutorial/DigitalPins[Description of the digital pins^]
+* #PRZYKŁAD# http://arduino.cc/en/Tutorial/DigitalPins[Opis styków cyfrowych^]
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

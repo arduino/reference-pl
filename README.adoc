@@ -1,37 +1,37 @@
 = Reference-pl
 
-Reference-pl is the repo for the Language Reference documentation of the Arduino syntax in **Polish**.  
-All the Reference terms files are in AsciiDoc format.
+Reference-pl to repozytorium **polskiej** dokumentacji języka programowania Arduino.
+Wszystkie pliki niniejszej Dokumentacji są w formacie AsciiDoc.
 
-Thank you for taking the time to contribute to Arduino content, this is really helpful to the whole Arduino Community. If you want to learn more on how to contribute to this project please check https://create.arduino.cc/projecthub/Arduino_Genuino/contribute-to-the-arduino-reference-af7c37[this step by step tutorial].
+Dziękujemy za poświęcenie czasu na wkład wniesiony w zawartość ninieszego opracowania, to jest naprawdę pomocne dla całej społeczności Arduino. Jeśli chcesz dowiedzieć się więcej o tym, jak przyczynić się do tego projektu, sprawdź  https://create.arduino.cc/projecthub/Arduino_Genuino/contribute-to-the-arduino-reference-af7c37[samouczek krok po kroku].
 
-== Content Creation and Editing
-If you want to contribute new content, create a new file (with any text or code editor) and save it as .adoc.  
-Do not use parenthesis or any special character in the file name.  
-In https://raw.githubusercontent.com/arduino/reference-pl/master/AsciiDoc_sample/AsciiDoc_Dictionary/AsciiDoc_Template-Dictionary.adoc[`reference-pl/AsciiDoc_sample/AsciiDoc_Dictionary`] you will find an overview on the AsciiDoc syntax. This includes Titles, Text, Links, Images, Tables, Code and various embeds (video, slideshow, audio and code). You can see it rendered https://www.arduino.cc/reference/pl/asciidoc_sample/asciidoc_dictionary/asciidoc_template-dictionary/[here].
+== Tworzenie i edycja treści
+Jeśli chcesz wnieść nową treść, utwórz nowy plik (dowolnym edytorem tekstu lub edytorem kodu źródłowego) i zapisz go jako .adoc.  
+Nie używaj nawiasów ani żadnych znaków specjalnych w nazwie pliku.  
+Pod adresem https://raw.githubusercontent.com/arduino/reference-pl/master/AsciiDoc_sample/AsciiDoc_Dictionary/AsciiDoc_Template-Dictionary.adoc[`reference-pl/AsciiDoc_sample/AsciiDoc_Dictionary`] znajdziesz przegląd składni AsciiDoc. Obejmuje to tytuły, napisy, łącza, obrazy, tabele, kod programów i różne materiały osadzane (wideo, pokazy slajdów, dźwięk i kod). Jak to zostanie przedstawione, możesz zobaczyć https://www.arduino.cc/reference/pl/asciidoc_sample/asciidoc_dictionary/asciidoc_template-dictionary/[tutaj].
 
-If you want to contribute to the Language Reference or edit existing content, you can find two templates in reference-pl/AsciiDoc_sample/Reference_Terms:
+Jeśli chcesz wnieść swój wkład do Dokumentacji Języka lub redagować już istniejącą treść, to pod adresem: reference-pl/AsciiDoc_sample/Reference_Terms możesz znaleźć dwa szablony:
 
-* Use https://raw.githubusercontent.com/arduino/reference-pl/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Single_Entity.adoc[`AsciiDoc_Template-Single_Entity.adoc`] (rendered https://www.arduino.cc/reference/pl/asciidoc_sample/reference_terms/asciidoc_template-single_entity/[here]) for terms such as link:http://arduino.cc/pl/Reference/AnalogWrite[analogWrite].
-* Use https://raw.githubusercontent.com/arduino/reference-pl/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Parent_Of_Entities.adoc[`AsciiDoc_Template-Parent_Of_Entities.adoc`] (rendered https://www.arduino.cc/reference/pl/asciidoc_sample/reference_terms/asciidoc_template-parent_of_entities/[here]) for groups of functions such as link:http://arduino.cc/pl/Reference/Serial[Serial].
+* Użyj https://raw.githubusercontent.com/arduino/reference-pl/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Single_Entity.adoc[`AsciiDoc_Template-Single_Entity.adoc`] (pokazane https://www.arduino.cc/reference/pl/asciidoc_sample/reference_terms/asciidoc_template-single_entity/[tutaj]) dla pojęć takich jak link:http://arduino.cc/pl/Reference/AnalogWrite[analogWrite].
+* Użyj https://raw.githubusercontent.com/arduino/reference-pl/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Parent_Of_Entities.adoc[`AsciiDoc_Template-Parent_Of_Entities.adoc`] (pokazane https://www.arduino.cc/reference/pl/asciidoc_sample/reference_terms/asciidoc_template-parent_of_entities/[tutaj]) dla grup funkcji takich jak link:http://arduino.cc/pl/Reference/Serial[Serial].
 
-Please note that every Reference file should include as least a Description, some Example Code, and links to other relevant infos (See Also section). 
+Należy pamiętać, że każdy plik Dokumentacji powinien zawierać co najmniej opis, jakiś przykładowy kod oraz łącza do innych istotnych informacji (sekcja Zobacz także). 
 
-If you need to add images to the Asciidoc please create a folder called attachments in the same directory as the Asciidoc file. Images can be saved in SVG and PNG format, max size 200KB.
+Jeśli chcesz dodać obrazy do Asciidoc, utwórz folder o nazwie attachments w tym samym katalogu co plik Asciidoc. Obrazy można zapisywać w formacie SVG i PNG, maksymalny rozmiar 200 kB.
 
-== Contribute Content on Github
-If you are not familiar with Git you can contribute content directly on Github via their online interface. We put together a short Tutorial to show you how, https://create.arduino.cc/projecthub/Arduino_Genuino/contribute-to-the-arduino-reference-af7c37[CHECK IT OUT!]
+== Przekazywanie treści na Github
+Jeśli nie jesteś zaznajomiony z Git, możesz dodawać treści bezpośrednio na Github za pośrednictwem jego interfejsu online. Przygotowaliśmy krótki samouczek, aby pokazać, jak to zrobić, https://create.arduino.cc/projecthub/Arduino_Genuino/contribute-to-the-arduino-reference-af7c37[SPRAWDŹ TO!]
 
-link:https://help.github.com/articles/editing-files-in-another-user-s-repository/[You can also follow this guide] (written by the Github team) to learn how to edit an .adoc file and propose a file change to the Arduino team.  
-When suggesting a change, please follow the guidelines described in the Reference template files.
+link:https://help.github.com/articles/editing-files-in-another-user-s-repository/[Możesz także prześledzić ten przewodnik] (napisany przez zespół Github) aby dowiedzieć się, jak edytować plik .adoc i zaproponować zespołowi Arduino zmianę pliku.  
+Sugerując zmianę, postępuj zgodnie z wytycznymi opisanymi w szablonach plików.
 
 
-== Submitting a pull request
-We are glad you want to contribute to the Arduino Reference: that's the best way to help the community.
+== Przesyłanie żądania ściągnięcia
+Cieszymy się, że chcesz przyczynić się do powstawania Dokumentacji języka Arduino: to najlepszy sposób, aby pomóc społeczności.
 
-Your contribution is adding or modifying existing code or full descriptions, please always refer to an existing issue or open a new one before contributing. 
+Twój wkład polega na dodawaniu lub modyfikowaniu istniejącego kodu lub całych opisów, proszę zawsze odnosić się do bieżącego wydania lub otwierać nowe przed przesłaniem swojego wkładu. 
 
-=== Folder Structure
+=== Struktura folderów
 [source]
 ----
 reference-pl
@@ -52,10 +52,10 @@ reference-pl
 
 ----
 
-Within the Language folder, the file tree follows the same structure as in the link:https://www.arduino.cc/reference/pl[Arduino Reference webpage]
+W folderze Language drzewo plików ma taką samą strukturę jak w odnośniku: https://www.arduino.cc/reference/pl [strona Dokumentacji Arduino]
 
-=== License
+=== Licencja
 
-Please note that your contribution to the Arduino Reference is licensed under a Creative Commons Attribution-Share Alike 3.0 License. see https://creativecommons.org/licenses/by-sa/3.0/
+Pamiętaj, że twój wkład w Dokumentację Arduino jest licencjonowany na licencji Creative Commons Uznanie autorstwa - Na tych samych warunkach 3.0. Zobatrz https://creativecommons.org/licenses/by-sa/3.0/
 
-image:https://i.creativecommons.org/l/by-sa/3.0/88x31.png[Creative Commons License, title="Creative Commons License"] This work is licensed under a link:https://creativecommons.org/licenses/by-sa/3.0/deed.pl[Creative Commons Attribution-ShareAlike 3.0 Unported License].
+image:https://i.creativecommons.org/l/by-sa/3.0/88x31.png[Creative Commons License, title="Creative Commons License"] Ta praca jest licencjonowana na zasadach link:https://creativecommons.org/licenses/by-sa/3.0/deed.pl[Creative Commons Attribution-ShareAlike 3.0 Unported License].

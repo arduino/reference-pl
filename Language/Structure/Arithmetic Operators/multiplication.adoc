@@ -1,91 +1,91 @@
 ---
 title: "*"
-title_expanded: "multiplication"
-categories: [ "Structure" ]
-subCategories: [ "Arithmetic Operators" ]
+title_expanded: "mnożenie"
+categories: [ "Struktura" ]
+subCategories: [ "Operatory arytmetyczne" ]
 ---
 
 
 
 
 
-= * Multiplication
+= * Mnożenie
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-*Multiplication* is one of the four primary arithmetic operations. The operator `*` (asterisk) operates on two operands to produce the product.
+=== Opis
+*Mnożenie* jest jednym z czterech podstawowych działań arytmetycznych. Operator `*` (gwiazdka) działa na dwóch argumentach aby obliczyć iloczyn.
 [%hardbreaks]
 
 
 [float]
-=== Syntax
-`product = operand1 * operand2;`
+=== Składnia
+`iloczyn = czynnik1 * czynnik2;`
 
 
 [float]
-=== Parameters
-`product`: variable. Allowed data types: `int`, `float`, `double`, `byte`, `short`, `long`. +
-`operand1`: variable or constant. Allowed data types: `int`, `float`, `double`, `byte`, `short`, `long`. +
-`operand2`: variable or constant. Allowed data types: `int`, `float`, `double`, `byte`, `short`, `long`.
+=== Parametry
+`iloczyn` : zmienna. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`czynnik1`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`czynnik2`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`.
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
+=== Przykładowy kod
 
 [source,arduino]
 ----
 int a = 5;
 int b = 10;
 int c = 0;
-c = a * b;  // the variable 'c' gets a value of 50 after this statement is executed
+c = a * b;  // zmienna 'c' otrzyma wartość 50 po wykonaniu tych instrukcji
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-1. The multiplication operation can overflow if the result is bigger than that which can be stored in the data type.
+=== Uwagi i Ostrzeżenia
+1. Podczas operacji mnożenia może wystąpić przepełnienie jeśli wynik będzie większy od wartości, którą można zapisać w tym typie danych.
 
-2. If one of the numbers (operands) are of the type float or of type double, floating point math will be used for the calculation.
+2. Jeśli jedna z liczb (argumentów) będzie typu float lub double, do obliczeń zostanie użyta arytmetyka zmiennoprzecinkowa.
 
-3. If the operands are of float / double data type and the variable that stores the product is an integer, then only the integral part is stored and the fractional part of the number is lost.
+3. Jeśli argumentyy będą typu float/double, a zmienna przechowująca iloczyn będzie typu całkowitego, wówczas zapisywana będzie tylko część całkowita wyniku a część ułamkowa będzie utracona.
 
 [source,arduino]
 ----
 float a = 5.5;
 float b = 6.6;
 int c = 0;
-c = a * b;  // the variable 'c' stores a value of 36 only as opposed to the expected product of 36.3
+c = a * b;  // zmienna 'c' otrzyma wartość 36 zamiast oczekiwanej wartości 36,3
 ----
 [%hardbreaks]
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
 
 
-// SEE ALSO SECTION STARTS
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="language"]
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

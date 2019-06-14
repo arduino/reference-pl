@@ -1,76 +1,76 @@
 ---
 title: "~"
-title_expanded: bitwise not
-categories: [ "Structure" ]
-subCategories: [ "Bitwise Operators" ]
+title_expanded: bitowe nie
+categories: [ "Struktura" ]
+subCategories: [ "Operatory bitowe" ]
 ---
 
 
 
 
 
-= ~ Bitwise NOT
+= ~ Bitowe NIE
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-The bitwise NOT operator in C++ is the tilde character `~`. Unlike & and |, the bitwise NOT operator is applied to a single operand to its right. Bitwise NOT changes each bit to its opposite: 0 becomes 1, and 1 becomes 0.
+=== Opis
+Operatorem bitowym NIE (negacji) jest w języku C++ znak fali `~`. W przeciwieństwie do & oraz | operator bitowy NIE jest stosowany do pojedynczego argumentu po jego prawej stronie. Bitowe NIE zmienia każdy bit na przeciwny: 0 staje się 1, a 1 staje się 0.
 [%hardbreaks]
 
-In other words:
+Inymi słowy:
 
-    0  1    operand1
+    0  1    argument1
     -----
-    1  0   ~operand1
+    1  0   ~argument1
 [%hardbreaks]
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
+=== Przykładowy kod
 
 [source,arduino]
 ----
-int a = 103;  // binary:  0000000001100111
-int b = ~a;   // binary:  1111111110011000 = -104
+int a = 103;  // dwójkowo:  0000000001100111
+int b = ~a;   // dwójkowo:  1111111110011000 = -104
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-You might be surprised to see a negative number like -104 as the result of this operation. This is because the highest bit in an int variable is the so-called sign bit. If the highest bit is 1, the number is interpreted as negative. This encoding of positive and negative numbers is referred to as two's complement. For more information, see the Wikipedia article on http://en.wikipedia.org/wiki/Twos_complement[two's complement^].
+=== Uwagi i ostrzeżenia
+W wyniku tej operacji możesz być zaskoczony liczbą ujemną, taką jak -104. Dzieje się tak, ponieważ najstarszy bit zmiennej typu int jest tak zwanym bitem znaku. Jeśli najstarszy bit wynosi 1, liczba jest interpretowana jako ujemna. To kodowanie liczb dodatnich i ujemnych nazywane jest uzupełnieniem do dwóch. Aby uzyskać więcej informacji, zobacz artykuł w Wikipedii pod adresem  https://pl.wikipedia.org/wiki/Kod_uzupe%C5%82nie%C5%84_do_dw%C3%B3ch[Kod uzupełnień do dwóch ^].
 
-As an aside, it is interesting to note that for any integer x, ~x is the same as -x - 1.
+Na marginesie, warto zauważyć, że dla dowolnej liczby całkowitej x, ~x jest taki sam jak -x - 1.
 
-At times, the sign bit in a signed integer expression can cause some unwanted surprises.
+Czasami bit znaku w wyrażeniu całkowitym ze znakiem może powodować niepożądane niespodzianki.
 [%hardbreaks]
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
 
-// SEE ALSO BEGINS
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="language"]
 
 [role="example"]
-* #EXAMPLE# https://www.arduino.cc/playground/Code/BitMath[BitMath Tutorial^]
+* #JĘZYK# https://www.arduino.cc/playground/Code/BitMath[Przewodnik po operacjach bitowych^]
 
 --
-//SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

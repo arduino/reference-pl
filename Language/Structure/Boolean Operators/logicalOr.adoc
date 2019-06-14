@@ -1,66 +1,66 @@
 ---
 title: "||"
-title_expanded: logical or
-categories: [ "Structure" ]
-subCategories: [ "Boolean Operators" ]
+title_expanded: logiczne lub
+categories: [ "Struktura" ]
+subCategories: [ "Operatory logiczne" ]
 ---
 
 
 
 
 
-= || Logical OR
+= || Logiczne LUB
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-*Logical OR* results in a `true` if either of the two operands is `true`.
+=== Opis
+Rezultatem *Logicznego LUB* jest `prawda` gdy którykolwiek z dwóch argumentów jest `prawdą`.
 [%hardbreaks]
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
-This operator can be used inside the condition of an link:../../control-structure/if[if] statement.
+=== Przykładowy kod
+Ten operator może być używany wewnątrz instrukcji link:../../control-structure/if[if].
 
 [source,arduino]
 ----
-if (x > 0 || y > 0) { // if either x or y is greater than zero
-  // statements
+if (x > 0 || y > 0) { // jeśli x lub y będzie większy od zera to wykonaj poniższe instrukcje
+  // instrukcje
 }
 ----
 
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-Do not confuse the boolean || (double pipe) operator with the bitwise OR operator | (single pipe).
+=== Uwagi i ostrzeżenia
+Nie pomyl logicznego LUB || (podwójna kreska pionowa) z operatorem bitowym LUB | (pojedyncza kreska pionowa).
 [%hardbreaks]
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
-// SEE ALSO SECTION
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="language"]
-* #LANGUAGE# link:../../bitwise-operators/bitwiseor[| Bitwise OR]
+* #JĘZYK# link:../../bitwise-operators/bitwiseor[| bitowe LUB]
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

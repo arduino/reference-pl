@@ -1,95 +1,95 @@
 ---
 title: "%"
-title_expanded: "remainder"
-categories: [ "Structure" ]
-subCategories: [ "Arithmetic Operators" ]
+title_expanded: "reszta"
+categories: [ "Struktura" ]
+subCategories: [ "Operatory arytmetyczne" ]
 ---
 
 
 
 
 
-= % Remainder
+= % Reszta
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-*Remainder* operation calculates the remainder when one integer is divided by another. It is useful for keeping a variable within a particular range (e.g. the size of an array). The `%` (percent) symbol is used to carry out remainder operation.
+=== Opis
+Operacja *reszta* (nazywana też modulo) oblicza resztę z dzielenia jednej liczby całkowitej przez inną. Jest przydatna do utrzymania wartości zmiennej w określonym zakresie (np. w granicach rozmiaru tablicy). Symbol `%` (procent) służy do obliczenia tej reszty.
 [%hardbreaks]
 
 
 [float]
-=== Syntax
-`remainder = dividend % divisor;`
+=== Składnia
+`reszta = dzielna % dzielnik;`
 
 [float]
-=== Parameters
-`remainder`: variable. Allowed data types: `int`, `float`, `double`. +
-`dividend`: variable or constant. Allowed data types: `int`. +
-`divisor`: *non zero* variable or constant. Allowed data types: `int`.
+=== Parametry
+`reszta`  : zmienna. Dozwolone typy danych: `int`, `float`, `double`. +
+`dzielna` : zmienna lub stała. Dozwolone typy danych: `int`. +
+`dzielnik`: *nie zero* zmienna lub stała. Dozwolone typy danych: `int`.
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
+=== Przykładowy kod
 
 [source,arduino]
 ----
 int x = 0;
-x = 7 % 5;  // x now contains 2
-x = 9 % 5;  // x now contains 4
-x = 5 % 5;  // x now contains 0
-x = 4 % 5;  // x now contains 4
-x = -4 % 5; // x now contains -4
-x = 4 % -5; // x now contains 4
+x = 7 % 5;  // x wynosi 2
+x = 9 % 5;  // x wynosi 4
+x = 5 % 5;  // x wynosi 0
+x = 4 % 5;  // x wynosi 4
+x = -4 % 5; // x wynosi -4
+x = 4 % -5; // x wynosi 4
 ----
 
 [source,arduino]
 ----
-/* update one value in an array each time through a loop */
+/* aktualizuj wartość w tablicy w każdym obiegu pętli */
 
-int values[10];
+int wartosci[10];
 int i = 0;
 
 void setup() {}
 
 void loop() {
-  values[i] = analogRead(0);
-  i = (i + 1) % 10; // remainder operator rolls over variable
+  wartosci[i] = analogRead(0);
+  i = (i + 1) % 10; // operator reszty zawija zmienną
 }
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-1. The remainder operator does not work on floats.
+=== Uwagi i Ostrzeżenia
+1. Operator reszty nie działa na liczbach zmiennoprzecinkowych,
 
-2. If the *first* operand is negative, the result is negative (or zero).
-Therefore, the result of `x % 10` will not always be between 0 and 9 if `x` can be negative.
+2. Jeśli *pierwszy* argument będzie ujemny to wynik będzie ujemny (albo zerowy).
+Dlatego wynik `x % 10` nie zawsze będzie wynosił między 0 a 9, jeśli `x` będzie ujemne.
 [%hardbreaks]
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
-// SEE ALSO SECTION STARTS
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="language"]
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

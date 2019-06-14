@@ -1,78 +1,78 @@
 ---
 title: "isAlpha()"
-categories: [ "Functions" ]
-subCategories: [ "Characters" ]
+categories: [ "Funkcje" ]
+subCategories: [ "Znaki" ]
 ---
 
 
 
 
 
-= isAlpha(thisChar)
+= isAlpha(tenZnak)
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-Analyse if a char is alpha (that is a letter). Returns true if thisChar contains a letter.
+=== Opis
+Sprawdza czy znak jest alfabetyczny (to znaczy czy jest literą). Zwraca prawdę jeśli tenZnak zawiera literę.
 [%hardbreaks]
 
 
 [float]
-=== Syntax
-`isAlpha(thisChar)`
+=== Składnia
+`isAlpha(tenZnak)`
 
 
 [float]
-=== Parameters
-`thisChar`: variable. Allowed data types: `char`.
+=== Parametry
+`tenZnak`: zmienna. Dozwolone typy danych: `char`.
 
 
 [float]
-=== Returns
-`true`: if thisChar is alpha.
+=== Wartości zwracane
+`true`: jeżeli tenZnak jest alfabetyczny.
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
+=== Przykładowy kod
 
 [source,arduino]
 ----
-if (isAlpha(myChar)) {  // tests if myChar is a letter
-  Serial.println("The character is a letter");
+if (isAlpha(mojZnak)) {                // sprawdza czy mojZnak jest literą
+  Serial.println("Znak jest literą");
 }
 else {
-  Serial.println("The character is not a letter");
+  Serial.println("Znak nie jest literą");
 }
 ----
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
-// SEE ALSO SECTION
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="language"]
-* #LANGUAGE#  link:../../../variables/data-types/char[char]
-* #LANGUAGE#  link:../../../structure/control-structure/if[if (conditional operators)]
-* #LANGUAGE#  link:../../../structure/control-structure/while[while (conditional operators)]
-* #LANGUAGE# link:../../communication/serial/read[read()]
+* #JĘZYK#  link:../../../variables/data-types/char[znak]
+* #JĘZYK#  link:../../../structure/control-structure/if[if (warunek)]
+* #JĘZYK#  link:../../../structure/control-structure/while[while (warunek)]
+* #JĘZYK#  link:../../communication/serial/read[read()]
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE
