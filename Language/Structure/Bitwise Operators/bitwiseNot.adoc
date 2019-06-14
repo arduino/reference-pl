@@ -1,0 +1,76 @@
+---
+title: "~"
+title_expanded: bitowe nie
+categories: [ "Struktura" ]
+subCategories: [ "Operatory bitowe" ]
+---
+
+
+
+
+
+= ~ Bitowe NIE
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Operatorem bitowym NIE (negacji) jest w języku C++ znak fali `~`. W przeciwieństwie do & oraz | operator bitowy NIE jest stosowany do pojedynczego argumentu po jego prawej stronie. Bitowe NIE zmienia każdy bit na przeciwny: 0 staje się 1, a 1 staje się 0.
+[%hardbreaks]
+
+Inymi słowy:
+
+    0  1    argument1
+    -----
+    1  0   ~argument1
+[%hardbreaks]
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+int a = 103;  // dwójkowo:  0000000001100111
+int b = ~a;   // dwójkowo:  1111111110011000 = -104
+----
+[%hardbreaks]
+
+[float]
+=== Uwagi i ostrzeżenia
+W wyniku tej operacji możesz być zaskoczony liczbą ujemną, taką jak -104. Dzieje się tak, ponieważ najstarszy bit zmiennej typu int jest tak zwanym bitem znaku. Jeśli najstarszy bit wynosi 1, liczba jest interpretowana jako ujemna. To kodowanie liczb dodatnich i ujemnych nazywane jest uzupełnieniem do dwóch. Aby uzyskać więcej informacji, zobacz artykuł w Wikipedii pod adresem  https://pl.wikipedia.org/wiki/Kod_uzupe%C5%82nie%C5%84_do_dw%C3%B3ch[Kod uzupełnień do dwóch ^].
+
+Na marginesie, warto zauważyć, że dla dowolnej liczby całkowitej x, ~x jest taki sam jak -x - 1.
+
+Czasami bit znaku w wyrażeniu całkowitym ze znakiem może powodować niepożądane niespodzianki.
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+[role="example"]
+* #JĘZYK# https://www.arduino.cc/playground/Code/BitMath[Przewodnik po operacjach bitowych^]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

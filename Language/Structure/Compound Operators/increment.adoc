@@ -1,0 +1,72 @@
+---
+title: "++"
+title_expanded: zwiększenie
+categories: [ "Structure" ]
+subCategories: [ "Compound Operators" ]
+---
+
+
+
+
+
+= ++ Zwiększenie
+
+
+// OVERVIEW SECTION STARTS
+[#overview]
+--
+
+[float]
+=== Opis
+Zwiększa wartość zmiennej o 1.
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`x\++;  // zwraca starą wartość x a następnie zwiększa x o jeden` +
+`++x;  // zwiększa x o jeden a następnie zwraca nową wartość x`
+
+
+[float]
+=== Parametry
+`x`: zmienna. Dozwolone typy danych: `int`, `long` (być może bez znaku).
+
+[float]
+=== Wartości zwracane
+Oryginalna lub nowa wartość zmiennej.
+
+--
+// OVERVIEW SECTION ENDS
+
+
+
+// HOW TO USE SECTION STARTS
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+x = 2;
+y = ++x;  // teraz x ma wartość 3, y również ma wartość 3
+y = x++;  // x ma wartość 4, ale y ciągle ma wartość 3
+----
+
+--
+// HOW TO USE SECTION ENDS
+
+
+// SEE ALSO SECTION
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+--
+// SEE ALSO SECTION ENDS

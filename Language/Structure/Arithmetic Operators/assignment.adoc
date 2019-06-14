@@ -1,0 +1,70 @@
+---
+title: "="
+title_expanded: "operator przypisania"
+categories: [ "Struktura" ]
+subCategories: [ "Operatory arytmetyczne" ]
+---
+
+
+
+
+
+= = Przypisanie (pojedynczy znak równości)
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Pojedynczy znak równości `=` w języku programowania C++ nazywany jest operatorem przypisania. Ma inne znaczenie niż na lekcjach matematyki, gdzie oznacza równanie lub równość. Operator przypisania mówi mikrokontrolerowi, aby ocenił dowolną wartość lub wyrażenie po prawej stronie znaku równości i zapisał ją w zmiennej po lewej stronie znaku równości.
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+
+
+[source,arduino]
+----
+int czujnik;              // deklaruje zmienną całkowitą o nazwie czujnik
+czujnik = analogRead(0);  // umieszcza w zmiennej czujnik napięcie wejściowe (cyfrową postać) z analogowego styku 0
+----
+[%hardbreaks]
+
+[float]
+=== Uwagi i ostrzeżenia
+1. Zmienna po lewej stronie operatora przypisania (znaku =) musi być w stanie pomieścić zapisaną w nim wartość. Jeśli nie będzie wystarczająco duża, aby ją pomieścić, to wartość przechowywana w zmiennej będzie niepoprawna.
+
+2. Nie należy mylić operatora przypisania [=] (pojedynczy znak równości) z operatorem porównania [==] (podwójny znak równości), który ocenia, czy dwa wyrażenia są równe.
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+* #JĘZYK#  link:../../control-structure/if[if (operatory porównania)]
+* #JĘZYK#  link:../../../variables/data-types/char[char]
+* #JĘZYK#  link:../../../variables/data-types/int[int]
+* #JĘZYK#  link:../../../variables/data-types/long[long]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

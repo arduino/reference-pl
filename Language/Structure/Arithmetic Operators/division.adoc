@@ -1,0 +1,86 @@
+---
+title: "/"
+title_expanded: "dzielenie"
+categories: [ "Struktura" ]
+subCategories: [ "Operatory arytmetyczne" ]
+---
+
+
+
+
+
+= / Dzielenie
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+*Dzielenie* jest jednym z czterech podstawowych działań atytmetycznych. Operator `/` (ukośnik) działa na dwóch argumentach aby aby obliczyć ich iloraz.
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`iloraz = dzielna / dzielnik;`
+
+
+[float]
+=== Parametry
+`iloraz`: zmienna. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`dzielna`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`dzielnik`: *nie zero* zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`.
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+int a = 50;
+int b = 10;
+int c = 0;
+c = a / b;  // zmienna 'c' otrzyma wartość 5 po wykonaniu tych instrukcji
+----
+[%hardbreaks]
+
+[float]
+=== Uwagi i Ostrzeżenia
+1. Jeśli jedna z liczb (argumentów) będzie typu float/double to do obliczeń zostanie użyta arytmetyka zmiennoprzecinkowa.
+
+2. Jeśli argumenty będą typu float/double, a zmienna przechowująca iloraz będzie liczbą całkowitą, wówczas zapisana zostanie tylko część całkowita liczby a część ułamkowa będzie utracona.
+
+[source,arduino]
+----
+float a = 55.5;
+float b = 6.6;
+int c = 0;
+c = a / b;  // zmienna 'c' otrzyma wartość 8 zamiast spodziewanego wyniku 8,409
+----
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ

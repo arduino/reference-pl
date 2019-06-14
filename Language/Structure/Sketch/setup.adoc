@@ -1,0 +1,60 @@
+---
+title: setup()
+categories: [ "Struktura" ]
+subCategories: [ "Szkic" ]
+---
+
+
+
+
+
+= setup()
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Funkcja `setup()` wywoływana jest na początku działania szkicu. Użyj jej aby zainicjować zmienne, ustawić tryby pracy styków, użyć bibliotek, itd. Funkcja `setup()` uruchamiana jest jeden raz, po włączeniu zasilania lub wyzerowaniu płytki Arduino.
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+int stykPrzycisku = 3;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(stykPrzycisku, INPUT);
+}
+
+void loop() {
+  // ...
+}
+----
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

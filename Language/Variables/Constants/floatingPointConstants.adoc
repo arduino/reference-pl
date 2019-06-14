@@ -1,0 +1,80 @@
+---
+title: Stałe zmiennoprzecinkowe
+categories: [ "Variables" ]
+subCategories: [ "Constants" ]
+---
+
+
+
+
+
+= Stałe zmiennoprzecinkowe
+
+
+// OVERVIEW SECTION STARTS
+[#overview]
+--
+
+[float]
+=== Opis
+Podobnie jak stałe całkowite, również stałe zmiennoprzecinkowe są używane do zwiększenia czytelności kodu. W czasie kompilacji stałe zmiennoprzecinkowe są zamieniane na wartość, dla której obliczane jest wyrażenie.
+[%hardbreaks]
+
+--
+// OVERVIEW SECTION ENDS
+
+
+
+// HOW TO USE SECTION STARTS
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+n = 0.005;  // 0.005 to stała zmiennoprzecinkowa
+----
+[%hardbreaks]
+
+[float]
+=== Uwagi i ostrzeżenia
+Stałe zmiennoprzecinkowe mogą być również wyrażone w różnych notacjach naukowych. „E” i „e” są akceptowane jako prawidłowe wskaźniki wykładnika.
+[%hardbreaks]
+
+|===
+|stała zmiennoprzecinkowa |obliczane jako: |również obliczane jako:
+
+|10.0
+|10
+|
+
+|2.34E5
+|2.34 * 10^5
+|234000
+
+|67e-12
+|67.0 * 10^-12
+|0.000000000067
+
+|===
+[%hardbreaks]
+
+--
+// HOW TO USE SECTION ENDS
+
+
+
+
+// SEE ALSO SECTION BEGINS
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+--
+// SEE ALSO SECTION ENDS

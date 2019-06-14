@@ -1,0 +1,63 @@
+---
+title: noTone()
+title_expanded: ""
+categories: [ "Funkcje" ]
+subCategories: [ "Zaawansowane We/Wy" ]
+aliases: [ /language/functions/advanced-io/noTone/ ]
+---
+
+
+= noTone()
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Zatrzymuje generowanie dźwięku wyzwolone przez `tone()`. Nie ma znaczenia, czy dźwięk został wygenerowany czy nie.
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`noTone(styk)`
+
+
+[float]
+=== Parametry
+`styk`: styk, dla którego chcesz zatrzymać dźwięk
+
+[float]
+=== Wartości zwracane
+Nic
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Uwagi i Ostrzeżenia
+Jeśli chcesz odtwarzać różne dźwięki na wielu stykach, musisz najpierw zatrzymać dźwięk za pomocą `noTone()` na jednym styku, a następnie wygenerować nowy dźwięk za pomocą `tone()` na innym styku.
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

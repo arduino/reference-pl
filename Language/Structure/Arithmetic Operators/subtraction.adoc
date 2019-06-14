@@ -1,0 +1,91 @@
+---
+title: "-"
+title_expanded: "odejmowanie"
+categories: [ "Struktura" ]
+subCategories: [ "Operatory arytmetyczne" ]
+---
+
+
+
+
+
+= - Odejmowanie
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+*Odejmowanie* jest jednym z czterech podstawowych działań arytmetycznych. Operator `-` (minus) działa na dwóch argumentach aby obliczyć różnicę między pierwszym a drugim.
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`różnica = odjemna - odjemnik;`
+
+
+[float]
+=== Parametry
+`różnica`: zmienna. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`odjemna`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`odjemnik`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`.
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+int a = 5;
+int b = 10;
+int c = 0;
+c = a - b;  // zmienna 'c' otrzyma wartość -5 po wykonaniu tych instrukcji
+----
+[%hardbreaks]
+
+[float]
+=== Uwagi i Ostrzeżenia
+1. W operacji odejmowania może wystąpić przepełnienie jeśli wynik będzie mniejszy niż ten, który mozna zapisać w danym type danych (np. odjęcie 1 od liczby całkowitej o wartości -32768 daje 32767).
+
+2. Jeśli jedna z liczb (argumentów) będzie typu float albo double to do obliczeń zostanie użyta arytmetyka zmiennoprzecinkowa.
+
+3. Jeśli argumenty będą typu float/double a zmienna przechowująca różnicę będzie typu całkowitego, wówczas zapisana będzie tylko część całkowita liczby, a część ułamkowa będzie utracona.
+
+[source,arduino]
+----
+float a = 5.5;
+float b = 6.6;
+int c = 0;
+c = a - b;  // zmienna 'c' otrzyma wartość -1 zamiast oczekiwanej wartości -1,1
+----
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

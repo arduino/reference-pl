@@ -1,0 +1,74 @@
+---
+title: "--"
+title_expanded: zmniejszenie
+categories: [ "Structure" ]
+subCategories: [ "Compound Operators" ]
+---
+
+
+
+
+
+= -- Zmniejszenie
+
+
+// OVERVIEW SECTION STARTS
+[#overview]
+--
+
+[float]
+=== Opis
+Zmniejsza wartość zmiennej o 1.
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`x--;  // zwraca starą wartość x a następnie zmniejsza x o jeden` +
+`--x;  // zmniejsza x o jeden a następnie zwraca nową wartość x`
+
+
+[float]
+=== Parametry
+`x`: zmienna. Dozwolone typy danych: `int`, `long` (być może bez znaku).
+
+
+[float]
+=== Wartości zwracane
+Oryginalna lub nowa, zmnejszona wartość zmiennej.
+
+--
+// OVERVIEW SECTION ENDS
+
+
+
+// HOW TO USE SECTION STARTS
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+x = 2;
+y = --x;  // teraz x ma wartość 1, y również ma wartość 1
+y = x--;  // x ma wartość 0, ale y ciągle ma wartość 1
+----
+
+--
+// HOW TO USE SECTION ENDS
+
+
+
+// SEE ALSO SECTION BEGINS
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+--
+// SEE ALSO SECTION ENDS

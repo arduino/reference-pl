@@ -1,0 +1,76 @@
+---
+title: "<"
+title_expanded: mniejsze niż
+categories: [ "Struktura" ]
+subCategories: [ "Operatory porównania" ]
+---
+
+
+
+
+
+= < Mniejsze niż
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Porównuje zmienną po lewej stronie z wartością lub zmienną po prawej stronie operatora. Zwraca wartość prawdziwą, gdy argument po lewej stronie jest mniejszy niż argument po prawej stronie. Należy pamiętać, że można porównywać zmienne różnych typów, ale może to generować nieprzewidywalne wyniki, dlatego zaleca się porównywanie zmiennych tego samego typu, w tym typy ze znakiem i bez znaku..
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`x < y;  // prawda gdy x jest mniejsze od y a fałsz gdy x jest równe lub większe od y`
+
+
+[float]
+=== Parametry
+`x`: zmienna. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`y`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`.
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+if (x < y) {  // sprawdza czy x jest mniejsze niż y
+  // zrób coś tylko gdy porównanie da w wyniku prawdę
+}
+----
+[%hardbreaks]
+
+[float]
+=== Uwagi i ostrzeżenia
+Liczby ujemne są mniejsze niż liczby dodatnie.
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

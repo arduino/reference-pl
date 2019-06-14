@@ -1,0 +1,50 @@
+---
+title: bit()
+categories: [ "Funkcje" ]
+subCategories: [ "Bity i Bajty" ]
+---
+
+
+
+
+
+= bit()
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Oblicza wartość określonego bitu (bit 0 równy 1, bit 1 równy 2, bit 2 równy 4, itd.).
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`bit(n)`
+
+
+[float]
+=== Parametry
+`n`: numer bitu do obliczenia
+
+
+[float]
+=== Wartości zwracane
+Wartość bitu.
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

@@ -1,0 +1,186 @@
+
+
+
+// Jest to plik dokumentacji dla autorów i redaktorów platformy treści Arduino Manutius.
+// Poniżej znajduje się lista wszystkich możliwych elementów strony z odpowiadającą im
+// składnią AsciiDoc
+
+
+// OGÓLNE WYTYCZNE
+// [Odstęp] + wysyła tekst do nowej linii, to znaczy generuje znak <br> na wyjściu HTML, np .:
+// To jest jakiś napis. +
+// To jest jakiś napis w nowej linii
+
+// [%hardbreaks] generuje nowy akapit <p>, np.:
+// To jest <p> akapit
+// [%hardbreaks]
+// To jest następny akapit <p>
+
+// Jeśli chcesz dodać pustą linię między sekcjami strony, możesz użyć:
+// {empty} +
+
+// Dobrą praktyką jest używanie [%hardbreaks] na końcu.
+// [%hardbreaks] zamyka znaczniki HTMLs, tworząc czysty wyjściowy kod HTML.
+
+// To ''' oddziela linie
+
+
+// TYTUŁ STRONY
+= Tytuł strony [h1]
+
+// POCZĄTEK CZĘŚCI DIV Z IDentyfikatorem
+[#nazwa_id]
+--
+
+// Dodaj tutaj swoje treści...
+
+// W przypadku, gdy dane wyjściowe są plikiem HTML, ten znacznik utworzy opakowanie div o podanym identyfikatorze, np .:
+// <div id="nazwa_id" class="openblock"></div>
+
+--
+// KONIEC CZĘŚCI DIV Z IDentyfikatorem
+
+
+// INNE TYTUŁY
+[float]
+== Tytuł Sekcji [h2]
+
+[float]
+=== Tytuł akapitu [h3]
+
+[float]
+==== Tytuł pod-akapitu [h4]
+
+
+'''
+
+// STYLE NAPISÓW
+To jest normalny <p> napis +
+*To jest wytłuszczony <strong> napis* +
+_To jest pochylony <em> napis_ +
+*_To jest wytłuszczony+pochylony <strong><em> napis_* +
+[small]#To jest mały <span class="small"> napis# +
+#To jest zaznaczony <mark> napis# +
+'`To jest napis w pojedynczym cudzysłowie`' +
+"`To jest napis w podwójnym cudzysłowie`"
+[%hardbreaks]
+
+'''
+
+// LĄCZA
+// Należy pamiętać, że wszystkie łącza zewnętrzne muszą być otwierane w nowym oknie/zakładce, dodając ^ tuż przed ostatnim nawiasem kwadratowym
+http://arduino.cc[To jest zewnętrzne <a href> łącze^] w nowej karcie +
+link:../index.html[To jest łącze względne <a href>] +
+mailto:webmaster@arduino.cc[To jest łącze do adresu e-mail]
+[%hardbreaks]
+
+'''
+
+// LISTY
+* To
+* jest
+** jakaś
+*** nienumerowana
+* lista
+
+[%hardbreaks]
+
+. To
+. jest
+.. ja-
+.. -kaś
+... nume-
+... -rowana
+. lista
+
+'''
+
+// KOD
+To jest `kod` w zdaniu +
+`To jest cała linijka kodu` +
+
+// WSKAZÓWKA: Należy pamiętać, że czasem podczas kopiowania i wklejania kodu może dodpisać się kilka odstępów na początku każdego wiersza kodu.
+// Jeśli się tak stanie, to usuń te dodatkowe odstępy.
+
+Może to być dużo więcej kodu
+[source,arduino]
+----
+for (int i = 0; i <= 99; i++) {
+  Serial.println('Chcemy więcej kodu!');
+}
+----
+[%hardbreaks]
+
+'''
+
+// TABELE
+|===
+|Nazwa kolumny 1 |Nazwa kolumny 2 |Nazwa kolumny 3
+
+|komórka w kolumnie 1, wiersz 1
+|komórka w kolumnie 2, wiersz 1
+|komórka w kolumnie 3, wiersz 1
+
+|komórka w kolumnie 1, wiersz 2
+|komórka w kolumnie 2, wiersz 2
+|komórka w kolumnie 3, wiersz 2
+
+|komórka w kolumnie 1, wiersz 3
+|komórka w kolumnie 2, wiersz 3
+|komórka w kolumnie 3, wiersz 3
+|===
+[%hardbreaks]
+
+'''
+
+// OBRAZY
+
+// Jeśli chcesz dodać obraz do Asciidoc, utwórz folder o nazwie „attachments” w tym samym katalogu co plik Asciidoc,
+// umieść tam obraz i odwołaj się do niego jak pokazano poniżej. Obrazy mogą być w formacie SVG i PNG, maksymalny rozmiar to 200 kB.
+
+// Aby dołączyć obraz we własnej linii (tzw. Obraz blokowy), użyj przedrostka image:: przed nazwą pliku i nawiasami kwadratowymi po niej []
+// Upewnij się, że dodajesz [%hardbreaks] między dowolnym tekstem a obrazem
+
+To jest obraz blokowy z adresem URL
+[%hardbreaks]
+image::https://store-cdn.arduino.cc/uni/catalog/product/cache/1/image/1040x660/604a3538c15e081937dbfbd20aa60aad/A/0/A000066_featured_2.jpg[]
+
+
+Jest to obraz zapisany w folderze załączników z podpisem
+[%hardbreaks]
+image::https://www.arduino.cc/reference/en/AsciiDoc_sample/AsciiDoc_Dictionary/attachments/ArduinoUno_R3_Front_450px.jpg[caption="", title="Przepiękne Arduino UNO"]
+
+
+'''
+
+// OSADZENIA
+
+To jest ładnieosadzony kod z Gist
+++++
+<script src="https://gist.github.com/mojavelinux/5333524.js">
+</script>
+++++
+
+{empty} +
+
+a to jest jeszcze inny filmz YouTube
+++++
+<iframe width="100%" height="315" src="https://www.youtube.com/watch?v=6cRFf4qkcTw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+++++
+// WSKAZÓWKA: Pamiętaj, aby ustawić szerokość iframe na 100%, aby film reagował na wszystkie nasze platformy
+
+{empty} +
+
+A tu kilka slajdów ze Slideshare, tak!
+++++
+<iframe src="https://www.slideshare.net/slideshow/embed_code/4430242" width="100%" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/damellis/introduction-to-arduino-4430242" title="Introduction to Arduino" target="_blank">Introduction to Arduino</a> </strong> from <strong><a href="//www.slideshare.net/damellis" target="_blank">David Mellis</a></strong> </div>
+++++
+// WSKAZÓWKA: Pamiętaj, aby ustawić szerokość iframe na 100%, aby pokaz slajdów był reagujący na wszystkie nasze platformy
+
+{empty} +
+
+A to jest trochę dźwięku z SoundCloud
+++++
+<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/55323777&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+++++
+// WSKAZÓWKA: Pamiętaj, aby ustawić szerokość iframe na 100%, aby interfejs dźwiękowy reagował na wszystkie nasze platformy

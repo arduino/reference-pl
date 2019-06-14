@@ -1,0 +1,89 @@
+---
+title: pinMode()
+categories: [ "Funkcje" ]
+subCategories: [ "Cyfrowe We/Wy" ]
+---
+
+
+//
+:ext-relative: .html
+
+= pinMode()
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Konfiguruje określony styk, aby zachowywał się jako wejście lub wyjście. Szczegółowe informacje na temat funkcjonalności styków można znaleźć na stronie http://arduino.cc/en/Tutorial/DigitalPins[ Styków cyfrowych].
+[%hardbreaks]
+Począwszy od Arduino 1.0.1, możliwe jest włączenie wewnętrznych rezystorów podciągających w trybie INPUT_PULLUP. Dodatkowo tryb INPUT jawnie wyłącza podciągnięcie wewnętrzne.
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`pinMode(styk, tryb)`
+
+
+[float]
+=== Parametry
+`styk`: numer styku, którego tryb chcesz ustawić. +
+`tryb`: `INPUT`, `OUTPUT`, lub `INPUT_PULLUP`. Zobacz stronę http://arduino.cc/en/Tutorial/DigitalPins[Styki cyfrowe], aby uzyskać pełniejszy opis funkcjonalności.
+
+
+[float]
+=== Wartości zwracane
+Nic
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+Ten kod ustawia cyfrowy styk 13 jako wyjście (`OUTPUT`) i przełącza go w stan wysoki (`HIGH`) a nastęþnie niski (`LOW`)
+
+[source,arduino]
+----
+void setup() {
+  pinMode(13, OUTPUT);    // ustawia styk cyfrowy nr 13 jako wyjście
+}
+
+void loop() {
+  digitalWrite(13, HIGH); // ustaw styk cyfrowy nr 13 w stan wysoki
+  delay(1000);            // czekaj jedną sekundę
+  digitalWrite(13, LOW);  // ustaw styk cyfrowy nr 13 w stan niski
+  delay(1000);            // czekaj jedną sekundę
+}
+----
+[%hardbreaks]
+
+[float]
+=== Uwagi i ostrzeżenia
+Analogowe styki wejściowe mogą być używane jako styki cyfrowe, określane jako A0, A1 itp.
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="example"]
+* #PRZYKŁAD# http://arduino.cc/en/Tutorial/DigitalPins[Opis styków cyfrowych^]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

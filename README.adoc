@@ -1,0 +1,61 @@
+= Reference-pl
+
+Reference-pl to repozytorium **polskiej** dokumentacji języka programowania Arduino.
+Wszystkie pliki niniejszej Dokumentacji są w formacie AsciiDoc.
+
+Dziękujemy za poświęcenie czasu na wkład wniesiony w zawartość ninieszego opracowania, to jest naprawdę pomocne dla całej społeczności Arduino. Jeśli chcesz dowiedzieć się więcej o tym, jak przyczynić się do tego projektu, sprawdź  https://create.arduino.cc/projecthub/Arduino_Genuino/contribute-to-the-arduino-reference-af7c37[samouczek krok po kroku].
+
+== Tworzenie i edycja treści
+Jeśli chcesz wnieść nową treść, utwórz nowy plik (dowolnym edytorem tekstu lub edytorem kodu źródłowego) i zapisz go jako .adoc.  
+Nie używaj nawiasów ani żadnych znaków specjalnych w nazwie pliku.  
+Pod adresem https://raw.githubusercontent.com/arduino/reference-pl/master/AsciiDoc_sample/AsciiDoc_Dictionary/AsciiDoc_Template-Dictionary.adoc[`reference-pl/AsciiDoc_sample/AsciiDoc_Dictionary`] znajdziesz przegląd składni AsciiDoc. Obejmuje to tytuły, napisy, łącza, obrazy, tabele, kod programów i różne materiały osadzane (wideo, pokazy slajdów, dźwięk i kod). Jak to zostanie przedstawione, możesz zobaczyć https://www.arduino.cc/reference/pl/asciidoc_sample/asciidoc_dictionary/asciidoc_template-dictionary/[tutaj].
+
+Jeśli chcesz wnieść swój wkład do Dokumentacji Języka lub redagować już istniejącą treść, to pod adresem: reference-pl/AsciiDoc_sample/Reference_Terms możesz znaleźć dwa szablony:
+
+* Użyj https://raw.githubusercontent.com/arduino/reference-pl/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Single_Entity.adoc[`AsciiDoc_Template-Single_Entity.adoc`] (pokazane https://www.arduino.cc/reference/pl/asciidoc_sample/reference_terms/asciidoc_template-single_entity/[tutaj]) dla pojęć takich jak link:http://arduino.cc/pl/Reference/AnalogWrite[analogWrite].
+* Użyj https://raw.githubusercontent.com/arduino/reference-pl/master/AsciiDoc_sample/Reference_Terms/AsciiDoc_Template-Parent_Of_Entities.adoc[`AsciiDoc_Template-Parent_Of_Entities.adoc`] (pokazane https://www.arduino.cc/reference/pl/asciidoc_sample/reference_terms/asciidoc_template-parent_of_entities/[tutaj]) dla grup funkcji takich jak link:http://arduino.cc/pl/Reference/Serial[Serial].
+
+Należy pamiętać, że każdy plik Dokumentacji powinien zawierać co najmniej opis, jakiś przykładowy kod oraz łącza do innych istotnych informacji (sekcja Zobacz także). 
+
+Jeśli chcesz dodać obrazy do Asciidoc, utwórz folder o nazwie attachments w tym samym katalogu co plik Asciidoc. Obrazy można zapisywać w formacie SVG i PNG, maksymalny rozmiar 200 kB.
+
+== Przekazywanie treści na Github
+Jeśli nie jesteś zaznajomiony z Git, możesz dodawać treści bezpośrednio na Github za pośrednictwem jego interfejsu online. Przygotowaliśmy krótki samouczek, aby pokazać, jak to zrobić, https://create.arduino.cc/projecthub/Arduino_Genuino/contribute-to-the-arduino-reference-af7c37[SPRAWDŹ TO!]
+
+link:https://help.github.com/articles/editing-files-in-another-user-s-repository/[Możesz także prześledzić ten przewodnik] (napisany przez zespół Github) aby dowiedzieć się, jak edytować plik .adoc i zaproponować zespołowi Arduino zmianę pliku.  
+Sugerując zmianę, postępuj zgodnie z wytycznymi opisanymi w szablonach plików.
+
+
+== Przesyłanie żądania ściągnięcia
+Cieszymy się, że chcesz przyczynić się do powstawania Dokumentacji języka Arduino: to najlepszy sposób, aby pomóc społeczności.
+
+Twój wkład polega na dodawaniu lub modyfikowaniu istniejącego kodu lub całych opisów, proszę zawsze odnosić się do bieżącego wydania lub otwierać nowe przed przesłaniem swojego wkładu. 
+
+=== Struktura folderów
+[source]
+----
+reference-pl
+├─ AsciiDoc_sample
+│   ├── AsciiDoc_Dictionary
+│   │   ├── AsciiDoc_Template-Dictionary.adoc
+│   │   └── attachments
+│   └── Reference_Terms
+│       ├── AsciiDoc_Template-Parent_Of_Entities.adoc
+│       ├── AsciiDoc_Template-Single_Entity.adoc
+│       └── attachments
+├── Language
+│   ├── Functions
+│   ├── Structure
+│   └── Variables
+├── LICENCE.md
+└── README.adoc
+
+----
+
+W folderze Language drzewo plików ma taką samą strukturę jak w odnośniku: https://www.arduino.cc/reference/pl [strona Dokumentacji Arduino]
+
+=== Licencja
+
+Pamiętaj, że twój wkład w Dokumentację Arduino jest licencjonowany na licencji Creative Commons Uznanie autorstwa - Na tych samych warunkach 3.0. Zobatrz https://creativecommons.org/licenses/by-sa/3.0/
+
+image:https://i.creativecommons.org/l/by-sa/3.0/88x31.png[Creative Commons License, title="Creative Commons License"] Ta praca jest licencjonowana na zasadach link:https://creativecommons.org/licenses/by-sa/3.0/deed.pl[Creative Commons Attribution-ShareAlike 3.0 Unported License].

@@ -1,0 +1,68 @@
+---
+title: "+="
+title_expanded: dodawanie złożone
+categories: [ "Struktura" ]
+subCategories: [ "Operatory złożone" ]
+---
+
+
+
+
+
+= += Dodawanie złożone
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Jest to skrócona forma dodawania zmiennej do innej stałej lub zmiennej.
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`x += y; // odpowiednik wyrażenia x = x + y;`
+
+
+[float]
+=== Parametry
+`x`: zmienna. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`y`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`.
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+x = 2;
+x += 4; // x ma wartość 6
+----
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+* #JĘZYK#  link:../../arithmetic-operators/addition[zwykłe dodawanie]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

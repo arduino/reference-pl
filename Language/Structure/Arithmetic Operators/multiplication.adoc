@@ -1,0 +1,91 @@
+---
+title: "*"
+title_expanded: "mnożenie"
+categories: [ "Struktura" ]
+subCategories: [ "Operatory arytmetyczne" ]
+---
+
+
+
+
+
+= * Mnożenie
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+*Mnożenie* jest jednym z czterech podstawowych działań arytmetycznych. Operator `*` (gwiazdka) działa na dwóch argumentach aby obliczyć iloczyn.
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`iloczyn = czynnik1 * czynnik2;`
+
+
+[float]
+=== Parametry
+`iloczyn` : zmienna. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`czynnik1`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`czynnik2`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`.
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+int a = 5;
+int b = 10;
+int c = 0;
+c = a * b;  // zmienna 'c' otrzyma wartość 50 po wykonaniu tych instrukcji
+----
+[%hardbreaks]
+
+[float]
+=== Uwagi i Ostrzeżenia
+1. Podczas operacji mnożenia może wystąpić przepełnienie jeśli wynik będzie większy od wartości, którą można zapisać w tym typie danych.
+
+2. Jeśli jedna z liczb (argumentów) będzie typu float lub double, do obliczeń zostanie użyta arytmetyka zmiennoprzecinkowa.
+
+3. Jeśli argumentyy będą typu float/double, a zmienna przechowująca iloczyn będzie typu całkowitego, wówczas zapisywana będzie tylko część całkowita wyniku a część ułamkowa będzie utracona.
+
+[source,arduino]
+----
+float a = 5.5;
+float b = 6.6;
+int c = 0;
+c = a * b;  // zmienna 'c' otrzyma wartość 36 zamiast oczekiwanej wartości 36,3
+----
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

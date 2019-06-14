@@ -1,0 +1,78 @@
+---
+title: "isAlpha()"
+categories: [ "Funkcje" ]
+subCategories: [ "Znaki" ]
+---
+
+
+
+
+
+= isAlpha(tenZnak)
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Sprawdza czy znak jest alfabetyczny (to znaczy czy jest literą). Zwraca prawdę jeśli tenZnak zawiera literę.
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`isAlpha(tenZnak)`
+
+
+[float]
+=== Parametry
+`tenZnak`: zmienna. Dozwolone typy danych: `char`.
+
+
+[float]
+=== Wartości zwracane
+`true`: jeżeli tenZnak jest alfabetyczny.
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+if (isAlpha(mojZnak)) {                // sprawdza czy mojZnak jest literą
+  Serial.println("Znak jest literą");
+}
+else {
+  Serial.println("Znak nie jest literą");
+}
+----
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+* #JĘZYK#  link:../../../variables/data-types/char[znak]
+* #JĘZYK#  link:../../../structure/control-structure/if[if (warunek)]
+* #JĘZYK#  link:../../../structure/control-structure/while[while (warunek)]
+* #JĘZYK#  link:../../communication/serial/read[read()]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

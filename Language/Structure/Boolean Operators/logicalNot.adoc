@@ -1,0 +1,72 @@
+---
+title: "!"
+title_expanded: logiczne NIE
+categories: [ "Struktura" ]
+subCategories: [ "Operatory logiczne" ]
+---
+
+
+
+
+
+= ! Logiczne NIE
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Rezultatem *Logicznego NIE* jest `prawda` jeśli argument jest `fałszywy` i odwrotnie.
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+Ten operator może być używany wewnątrz warunku instrukcji link:../../control-structure/if/[if].
+
+[source,arduino]
+----
+if (!x) { // jeśli x nie jest prawdziwe to wykonaj poniższe instrukcje
+  // instrukcje
+}
+----
+
+Można go użyć do zmiany wartości logicznej na przeciwną.
+[source,arduino]
+----
+x = !y; // przeciwna logicznie wartość y wpisana jest do x
+----
+
+
+[%hardbreaks]
+
+[float]
+=== Uwagi i ostrzeżenia
+Bitowe nie ~ (fala/tylda) wygląda zupełnie inaczej niż logiczne nie ! (wykrzyknik), ale upewnij się, do czego chcesz tego użyć.
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+* #JĘZYK# link:../../bitwise-operators/bitwisenot[~ bitowe NIE]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

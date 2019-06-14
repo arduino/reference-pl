@@ -1,0 +1,95 @@
+---
+title: "%"
+title_expanded: "reszta"
+categories: [ "Struktura" ]
+subCategories: [ "Operatory arytmetyczne" ]
+---
+
+
+
+
+
+= % Reszta
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Operacja *reszta* (nazywana też modulo) oblicza resztę z dzielenia jednej liczby całkowitej przez inną. Jest przydatna do utrzymania wartości zmiennej w określonym zakresie (np. w granicach rozmiaru tablicy). Symbol `%` (procent) służy do obliczenia tej reszty.
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`reszta = dzielna % dzielnik;`
+
+[float]
+=== Parametry
+`reszta`  : zmienna. Dozwolone typy danych: `int`, `float`, `double`. +
+`dzielna` : zmienna lub stała. Dozwolone typy danych: `int`. +
+`dzielnik`: *nie zero* zmienna lub stała. Dozwolone typy danych: `int`.
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+int x = 0;
+x = 7 % 5;  // x wynosi 2
+x = 9 % 5;  // x wynosi 4
+x = 5 % 5;  // x wynosi 0
+x = 4 % 5;  // x wynosi 4
+x = -4 % 5; // x wynosi -4
+x = 4 % -5; // x wynosi 4
+----
+
+[source,arduino]
+----
+/* aktualizuj wartość w tablicy w każdym obiegu pętli */
+
+int wartosci[10];
+int i = 0;
+
+void setup() {}
+
+void loop() {
+  wartosci[i] = analogRead(0);
+  i = (i + 1) % 10; // operator reszty zawija zmienną
+}
+----
+[%hardbreaks]
+
+[float]
+=== Uwagi i Ostrzeżenia
+1. Operator reszty nie działa na liczbach zmiennoprzecinkowych,
+
+2. Jeśli *pierwszy* argument będzie ujemny to wynik będzie ujemny (albo zerowy).
+Dlatego wynik `x % 10` nie zawsze będzie wynosił między 0 a 9, jeśli `x` będzie ujemne.
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

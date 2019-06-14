@@ -1,0 +1,108 @@
+---
+title: if
+categories: [ "Struktura" ]
+subCategories: [ "Instrukcje sterujące" ]
+---
+
+
+
+
+
+= if
+
+
+// OVERVIEW SECTION STARTS
+[#overview]
+--
+[float]
+=== Opis
+Instrukcja `if` (ang. jeżeli) sprawdza warunek i wykonuje instrukcję lub ciąg instrukcji jeżeli warunek jest prawdziwy.
+[%hardbreaks]
+
+[float]
+=== Składnia
+[source,arduino]
+----
+if (warunek) {
+  //instrukcj(-a/-e)
+}
+----
+
+
+[float]
+=== Parametry
+`warunek`: wyrażenie logiczne (to znaczy, przyjmujące wartość `prawda` (true) lub `fałsz` (false) ).
+
+--
+// OVERVIEW SECTION ENDS
+
+
+
+
+// HOW TO USE SECTION STARTS
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+Można pominąć nawiasy klamrowe po wyrażeniu `if`. W takim przypadku następująca potem linia (do znaku średnika) będzie jedyną instrukcją warunkową.
+[%hardbreaks]
+
+[source,arduino]
+----
+if (x > 120) digitalWrite(stykLED, HIGH);
+
+if (x > 120)
+digitalWrite(stykLED, HIGH);
+
+if (x > 120) {digitalWrite(stykLED, HIGH);}
+
+if (x > 120) {
+  digitalWrite(stykLED1, HIGH);
+  digitalWrite(stykLED2, HIGH);
+}
+// wszystkie są poprawne
+----
+[%hardbreaks]
+
+
+[float]
+=== Uwagi i ostrzeżenia
+Instrukcje badane w nawiasie okrągłym wymagają użycia jednego lub więcej operatorów wymienionych poniżej.
+[%hardbreaks]
+
+*Operatory porównania:*
+
+ x == y (x jest równe y)
+ x != y (x jest różne od y)
+ x <  y (x jest mniejsze niż y)
+ x >  y (x jest większe niż y)
+ x <= y (x jest mniejsze bądź równe y)
+ x >= y (x jest większe bądź równe y)
+
+
+Uważaj na przypadkowe użycie pojedynczego znaku równości (np. `if (x = 10)` ). Pojedynczy znak równości jest instrukcją przypisania i ustawia wartość `x` na 10 (umieszcza wartość 10 w zmiennej `x`). Zamiast tego użyj podwójnego znaku równości (np. `if (x == 10)` ), który jest operatorem porównania i bada `czy` x jest równe 10 czy nie. Drugie wyrażenie jest prawdziwe tylko wtedy gdy `x` jest równe 10, a pierwsze wyrażenie jest zawsze prawdziwe.
+
+Dzieje się tak, dlatego że język C++ oblicza wartość wyrażenia `if (x=10)` następująco: 10 jest przypisywane do `x`
+ (pamiętaj, że pojedyńczy znak równości jest (http://arduino.cc/en/Reference/Assignment[instrukcją przypisania^])), dlatego x ma wartość 10. Następnie warunek `if` oblicza 10, co zawsze oznacza prawdę (TRUE), ponieważ każda niezerowa liczba oznacza prawdę (TRUE). I dlatego, `if (x = 10)` zawsze będzie prawdziwe, co nie jest pożądanym wynikiem w przypadku użycia instrukcji `if`.
+ Dodatkowo zmienna `x` dostanie wartość 10, co również nie jest działaniem pożądanym.
+[%hardbreaks]
+
+--
+// HOW TO USE SECTION ENDS
+
+
+
+
+// SEE ALSO SECTION BEGINS
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+--
+// SEE ALSO SECTION ENDS

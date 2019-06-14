@@ -1,0 +1,66 @@
+---
+title: "||"
+title_expanded: logiczne lub
+categories: [ "Struktura" ]
+subCategories: [ "Operatory logiczne" ]
+---
+
+
+
+
+
+= || Logiczne LUB
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Rezultatem *Logicznego LUB* jest `prawda` gdy którykolwiek z dwóch argumentów jest `prawdą`.
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+Ten operator może być używany wewnątrz instrukcji link:../../control-structure/if[if].
+
+[source,arduino]
+----
+if (x > 0 || y > 0) { // jeśli x lub y będzie większy od zera to wykonaj poniższe instrukcje
+  // instrukcje
+}
+----
+
+[%hardbreaks]
+
+[float]
+=== Uwagi i ostrzeżenia
+Nie pomyl logicznego LUB || (podwójna kreska pionowa) z operatorem bitowym LUB | (pojedyncza kreska pionowa).
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+* #JĘZYK# link:../../bitwise-operators/bitwiseor[| bitowe LUB]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

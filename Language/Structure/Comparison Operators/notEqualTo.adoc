@@ -1,0 +1,73 @@
+---
+title: "!="
+title_expanded: różne
+categories: [ "Struktura" ]
+subCategories: [ "Operatory porównania" ]
+---
+
+
+
+
+
+= != Różne
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Porównuje zmienną po lewej stronie z wartością lub zmienną po prawej stronie operatora. Zwraca wartość prawdziwą, gdy dwa argumenty są różne (nie są sobie równe). Należy pamiętać, że można porównywać zmienne różnych typów, ale może to generować nieprzewidywalne wyniki, dlatego zaleca się porównywanie zmiennych tego samego typu, w tym typy ze znakiem i bez znaku.
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`x != y; // fałsz gdy x jest równy y a prawda gdy x jest różny od y`
+
+
+[float]
+=== Parametry
+`x`: zmienna. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`y`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`.
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+if (x != y) { // sprawdź czy x jest różne od y
+  // zrób coś tylko gdy porównanie da w wyniku prawdę
+}
+----
+[%hardbreaks]
+
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

@@ -1,0 +1,136 @@
+---
+title: Tytuł Elementu
+title_expanded: Mniejsze bądź równe
+categories: [ "Struktura" ]
+subCategories: [ "Nazwa podkategorii" ]
+---
+// ZNACZNIK DOKUMENTACJI JĘZYKA ARDUINO (powyższy)   ►►►►► ZAWSZE UMIESZCZAJ W SWOIM PLIKU ◄◄◄◄◄
+// title: pojawi się w Indeksie wszystkich pojęć dokumentacji
+// Jeśli title jest operatorem, zapisz go słowami w title_expanded
+// categories: wybór pomiędzy: Struktura, Zmienne, Funkcje
+// subCategories: w ramach dostępnych w indeksie ("Cyfrowe We/Wy", "Operatory Arytmetyczne")
+
+
+
+
+
+// TYTUŁ STRONY
+= tytuł
+
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+// Opis czym jest ten termin w dokumentacji i do czego służy ►►►►► TA SEKCJA JEST OBOWIĄZKOWA ◄◄◄◄◄
+Wpisuje wartość analogową (http://arduino.cc/en/Tutorial/PWM[modulacja PWM]) do styku. Może być używane do włączania diod świecących z różną jasnością lub napędzania silnika różnymi prędkościami. Po wywołaniu `analogWrite()` na styku generowana jest fala prostokątna o określonym stopniu wypełnienia aż do następnego wywołania `analogWrite()` (albo wywołania `digitalRead()` lub `digitalWrite()` dla tego samego styku). Częstotliwość sygnału PWM na większości styków wynosi około 490 Hz. Na płytkach Uno i podobnych, styki 5 i 6 pracują z częstotliwością około 980 Hz.
+[%hardbreaks]
+
+image::http://arduino.cc/en/uploads/Main/ArduinoUno_R3_Front_450px.jpg[caption="", title="Piękne Arduino UNO"]
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+// Wprowadź składnię terminu w dokumentacji, podaj wszystkie dostępne parametry  ►►►►► TA SEKCJA JEST OBOWIĄZKOWA ◄◄◄◄◄
+`analogWrite(styk, wartość)`
+
+
+[float]
+=== Parametry
+// Lista wszystkich dostępnych parametrów, proszę opisać je pojedynczo, dodając typ danych (np. int, boolean, char, String, float, long, double...)  ►►►►► TA SEKCJA JEST OBOWIĄZKOWA DLA FUNKCJI ◄◄◄◄◄
+`styk`: numer styku do zapisu. Dozwolone typy danych: int. +
+`wartość`: stopień wypełnienia między 0 (zawsze wyłączone) a 255 (zawsze włączone). Dozwolone typy danych: int.
+
+
+[float]
+=== Wartości zwracane
+// Podaj co funkcja zwraca (np. HIGH lub LOW), jeśli nic nie zwraca, napisz: _Nic_   ►►►►► TA SEKCJA JEST OBOWIĄZKOWA DLA FUNKCJI ◄◄◄◄◄
+Nic
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+// Opisz, na jak działa przykładowy kod i go dodaj   ►►►►► TA SEKCJA JEST OBOWIĄZKOWA ◄◄◄◄◄
+Ustawia wartość na wyjściu dla diody proporcjonalną do wartości odczytanej z potencjometru.
+
+
+[source,arduino]
+// Dodaj odpowiedni kod, który jest przykładem użycia danego terminu
+// Pamiętaj, że czasami podczas wklejania kodu może dodać się kilka odstępów na początku każdego wiersza.
+// Jeśli się tak stanie, usun proszę dodatkowe te odstępy. Dzięki!
+----
+int stykDiody = 9;     // dioda świecąca podłączona do cyfrowego styku nr 9
+int stykAnalogowy = 3; // potencjometr podłączony do analogowego styku nr 3
+int wart = 0;          // zmienna używana do przechowywania odczytanej wartości
+
+void setup() {
+  pinMode(stykDiody, OUTPUT);   // ustawia styk jako wyjściowy
+}
+
+void loop() {
+  wart = analogRead(stykAnalogowy);   // odczytuje ze styku wejściowego
+  analogWrite(stykDiody, wart / 4);  // wartości analogRead są z zakresu 0 do 1023, wartości analogWrite z zakresu 0 do 255
+}
+----
+[%hardbreaks]
+
+
+[float]
+=== Uwagi i Ostrzeżenia
+// Dodaj przydatne uwagi, wskazówki, zastrzeżenia, znane problemy i ostrzeżenia dotyczące tego terminu
+Wynika to z wzajemnego oddziaływania funkci `millis()` i `delay()`.
+[%hardbreaks]
+image::http://arduino.cc/en/uploads/Main/ArduinoUno_R3_Front_450px.jpg[caption="", title="Piękne Arduino UNO"]
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+// Istotna kategoria treści np. inne pojęcie w dokumentacji (proszę dodać znacznik #JĘZYK#),
+// definicje (proszę dodać znacznik #DEFINICJA#), oraz przykłady Projektów i Samouczków
+// przykłady: (proszę dodać znacznik #PRZYKŁAD#)
+
+
+[role="language"]
+// Zawsze gdy chcesz dać odnośnik do innego pojęcia z Dokumentacji, lub ogólnie użyć odnośnika względnego,
+// użyj składni pokazanej poniżej. Pamiętaj, że format pliku będzie określony przez atrybut.
+// Pamiętaj, że zawsze musisz zastąpić odstępy w nazwach plików lub katalogów ciągiem %20.
+// Cały odnośnik do stron w dokumentacji musi być pisany małymi literami, niezależnie od pisowni plików i katalogów.
+// W przypadku znaczników językowych elementy zostaną automatycznie wygenerowane dla dowolnego innego elementu tej
+// samej podkategorii, nie ma potrzeby dodawania odnośników do innych stron tej samej podkategorii
+// jeśli nie uwzględnisz tej sekcji, zostanie wygenerowana minimalna wersja tylko z innymi stronami tej samej podkategorii.
+* #JĘZYK# link:../AsciiDoc_Template-Parent_Of_Entities[Wzór Elementów]
+* #JĘZYK# link:../../AsciiDoc_Dictionary/AsciiDoc_Template-Dictionary[Wzorzec słownika AsciiDoc]
+
+[role="definition"]
+// Należy pamiętać, że wszystkie odnośniki do materiałów zewnętrznych muszą być otwierane w nowym oknie/karcie poprzez dodanie
+// znaku ^ zaraz po ostatnim nawiasie kwadratowym
+* #DEFINICJA# http://arduino.cc/en/Tutorial/PWM[PWM^]
+
+[role="example"]
+// Należy pamiętać, że wszystkie odnośniki do materiałów zewnętrznych muszą być otwierane w nowym oknie/karcie poprzez dodanie
+// znaku ^ zaraz po ostatnim nawiasie kwadratowym
+* #PRZYKŁAD# http://arduino.cc/en/Tutorial/Blink[Blink^]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

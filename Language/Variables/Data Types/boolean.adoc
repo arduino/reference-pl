@@ -1,0 +1,36 @@
+---
+title: boolean
+categories: [ "Zmienne" ]
+subCategories: [ "Typy danych" ]
+---
+
+= boolean
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+`boolean` is a non-standard type alias for link:../../../variables/data-types/bool/[bool] defined by Arduino. It's recommended to instead use the standard type `bool`, which is identical.
+
+
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

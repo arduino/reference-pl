@@ -1,0 +1,82 @@
+---
+title: else
+categories: [ "Structure" ]
+subCategories: [ "Instrukcje sterujące" ]
+---
+
+
+
+
+
+= if...else
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Instrukcja `if...else` (jeżeli/w przeciwnym razie) umożliwia większą kontrolę nad wykonywaniem programu niż podstawowa instrukcja link:../if[if], umożliwiając grupowanie wielu testów. Klauzula `else` (jeśli w ogóle istnieje) zostanie wykonana, jeśli warunek w instrukcji `if` będzie fałszywy. Polecenie `else` może wykonać kolejny test `if`, dzięki czemu można uruchomić jednocześnie wiele wzajemnie wykluczających się testów.
+[%hardbreaks]
+
+Każdy test przechodzi do następnego, dopóki nie zostanie napotkany wynik prawdziwy. Po znalezieniu prawdy wykonywany jest powiązany z nim blok kodu, a następnie program przeskakuje do linii następującej po całej konstrukcji if/else. Jeśli żaden test nie okaże się prawdziwy, wykonany zostaje domyślny blok `else`, jeśli jest obecny, co określa zachowanie domyślne.
+[%hardbreaks]
+
+Zauważ, że po bloku `else if` może być lub nie użyty zamykający blok `else` i odwrotnie. Dozwolona jest nieograniczona liczba takich gałęzi `else if`.
+
+[float]
+=== Składnia
+[source,arduino]
+----
+if (warunek1) {
+  // wykonaj czynność A
+}
+else if (warunek2) {
+  // wykonaj czynność B
+}
+else {
+  // wykonaj czynność C
+}
+----
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+[float]
+=== Przykładowy kod
+Poniżej znajduje się wyciąg z kodu systemu czujników temperatury
+[source,arduino]
+----
+if (temperatura >= 70) {
+  //Niebezpieczeństwo! Wyłącz system
+}
+else if (temperatura >= 60 && temperatura < 70) {
+  //Ostrzeżenie! Wymagana jest uwaga użytkownika
+}
+else {
+  //Bezpiecznie! Kontynuuj zwykłe zadania...
+}
+----
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

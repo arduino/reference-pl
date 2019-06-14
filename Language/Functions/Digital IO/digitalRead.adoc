@@ -1,0 +1,92 @@
+---
+title: digitalRead()
+categories: [ "Funkcje" ]
+subCategories: [ "Cyfrowe We/Wy" ]
+---
+
+
+//
+:ext-relative: .html
+
+= digitalRead()
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Z określonego styku cyfrowego odczytuje wartość WYSOKI (`HIGH`) lub NISKI (` LOW`).
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`digitalRead(styk)`
+
+
+[float]
+=== Parametry
+`styk`: numer styku cyfrowego, który chcesz odczytać
+
+
+[float]
+=== Wartości zwracane
+`HIGH` lub `LOW`
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+// Dodaj przykładowy kod i opisz jego działanie   ►►►►► NINIEJSZA SEKCJA JEST OBOWIĄZKOWA ◄◄◄◄◄
+Na styku 13 ustawia na taką samą wartość jaką ma styk 7, zadeklarowany jako wejście.
+
+[source,arduino]
+----
+int stykDiody = 13;     // dioda świecąc podłączona do cyfrowego styku nr 13
+int stykWejscia = 7;    // przycisk podłączony do cyfrowego styku nr 7
+int wart = 0;           // zmienna przechowująca odczytaną wartość
+
+void setup() {
+  pinMode(stykDiody, OUTPUT);    // ustawia cyfrowy styk nr 13 jako wejście
+  pinMode(stykWejscia, INPUT);   // ustawia cyfrowy styk nr 7 jako wejście
+}
+
+void loop() {
+  wart = digitalRead(stykWejscia); // odczytuje styk wejściowy
+  digitalWrite(stykDiody, wart);   // ustawia stan diody świecącej na wartość odczytaną z przycisku
+}
+----
+[%hardbreaks]
+
+[float]
+=== Uwagi i ostrzeżenia
+Jeśli styk nie jest do niczego podłączony, to digitalRead () może zwrócić wartość HIGH lub LOW (i może się to zmieniać losowo).
+
+Analogowe styki wejściowe mogą być używane jako styki cyfrowe, nazwane A0, A1, itp. Wyjątkiem są styki A6 i A7 Arduino Nano, Pro Mini i Mini, które mogą być używane tylko jako wejścia analogowe.
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="example"]
+* #PRZYKŁAD# http://arduino.cc/en/Tutorial/DigitalPins[Opis styków cyfrowych^]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

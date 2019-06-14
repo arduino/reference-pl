@@ -1,0 +1,89 @@
+---
+title: "+"
+title_expanded: "dodawanie"
+categories: [ "Struktura" ]
+subCategories: [ "Operatory arytmetyczne" ]
+---
+
+
+
+
+
+= + Dodawanie
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+*Dodawanie* jest jednym z czterech podstawowych działań arytmetycznych. Operator `+` (plus) działa na dwóch argumentach, aby w wyniku dać sumę.
+[%hardbreaks]
+
+
+[float]
+=== Składnia
+`suma = składnik1 + składnik2;`
+
+[float]
+=== Parametry
+`suma`: zmienna. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`składnik1`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`składnik2`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`.
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+
+[source,arduino]
+----
+int a = 5;
+int b = 10;
+int c = 0;
+c = a + b;  // po wykonaniu tej instrukcji zmienna 'c' otrzyma wartość 15
+----
+[%hardbreaks]
+
+[float]
+=== Uwagi i ostrzeżenia
+1. W wyniku operacji dodawania może nastąpić przepełnienie, jeśli wynik jest większy od wartości, która może być przechowywana w danym typie danych (np. dodanie 1 do liczby całkowitej o wartości 32767 daje -32768).
+
+2. Jeśli jedna z liczb (argumentów) jest typu float lub typu double, do obliczeń zostanie użyta arytmetyka zmiennoprzecinkowa.
+
+3. Jeśli argumenty będą typu float / double, a zmienna przechowująca sumę będzie liczbą całkowitą, wówczas zapisana będzie tylko część całkowita liczby a część ułamkowa będzie utracona.
+
+[source,arduino]
+----
+float a = 5.5;
+float b = 6.6;
+int c = 0;
+c = a + b;  // zmienna 'c' otrzyma wartość 12 zamiast oczekiwanej liczby 12,1
+----
+[%hardbreaks]
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

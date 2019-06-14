@@ -1,0 +1,105 @@
+---
+title: Tytuł wzoru elementu
+categories: [ "Kategorie" ]
+subCategories: [ "Nazwa Podkategorii" ]
+---
+// ZNACZNIK DOKUMENTACJI JĘZYKA ARDUINO (powyższy)   ►►►►► ZAWSZE UMIESZCZAJ W SWOIM PLIKU ◄◄◄◄◄
+// title: pojawi się w Indeksie wszystkich pojęć dokumentacji
+// categories: wybór pomiędzy: Struktura, Zmienne, Funkcje
+// subCategories: w ramach dostępnych w indeksie ("Cyfrowe We/Wy", "Operatory Arytmetyczne")
+
+
+
+
+
+// TYTUŁ STRONY   ►►►►► TO JEST OBOWIĄZKOWE ◄◄◄◄◄
+= Tytuł wzoru elementu()
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+// Opisz, do czego służy ta grupa pojęć dokumentacji, -- NINIEJSZA SEKCJA JEST OBOWIĄZKOWA --
+Służy do komunikacji między płytką Arduino a komputerem lub innymi urządzeniami. Wszystkie płytki Arduino mają co najmniej jeden port szeregowy (znany również jako UART lub USART): Szeregowy. Komunikuje się na cyfrowych stykach 0 (RX) i 1 (TX), jak również z komputerem przez USB. W związku z tym, jeśli korzystasz z takiej komunikacji, nie możesz jednocześnie używać styków 0 i 1 jako wejść lub wyjść cyfrowych. +
+Możesz użyć monitora wbudowanego w środowisko Arduino do komunikacji z płytką Arduino. Kliknij przycisk monitora szeregowego na pasku narzędzi i wybierz tę samą szybkość transmisji, którą użyłeś w wywołaniu `begin()`.
+[%hardbreaks]
+*Arduino Mega* posiada trzy dodatkowe porty szeregowe: `Serial1` na stykach 19 (RX) i 18 (TX), `Serial2` na stykach 17 (RX) i 16 (TX), `Serial3` na stykach 15 (RX) i 14 (TX). Aby użyć tych styków do komunikacji z komputerem, będziesz potrzebował dodatkowej przejściówki z USB na Szeregowy, ponieważ nie są one podłączone do konwertera na płytce MEGA. Aby użyć tych portów do komunikacji z zewnętrznym urządzeniem TTL, podłącz styk TX do styku RX urządzenia, RX do styku TX urządzenia, a masę płytki MEGA z masą urządzenia zewnętrznego. (Nie podłączaj tych styków bezpośrednio do portu RS232, które działają na napięciach +/-12V i mogą uszkodzić płytkę Arduino.)
+[%hardbreaks]
+*Arduino DUE* posiada trzy dodatkowe porty szeregowe TTL o napięciu 3,3V: `Serial1` na stykach 19 (RX) i 18 (TX); `Serial2` na stykach 17 (RX) i 16 (TX), `Serial3` na stykach 15 (RX) i 14 (TX). Styki 0 i 1 są również podłączone do odpowiednich styków układu ATmega16U2, który pełni funkcję przejścia USB-TTL, a ten jest podłączony do portu odpluswiania USB. Dodatkowo, układ SAM2X posiada swój własny port szeregowy USB zwany `SerialUSB`.
+[%hardbreaks]
+Płytka *Arduino Leonardo* używa `Serial1` do komunikacji szeregowej TTL (5V) na stykach 0 (RX) i 1 (TX). `Serial` jest zarezerwowany do komunikacji USB CDC. Więcej informacji można znaleźć na stronie wprowadzenia do Leonardo i stronie dotyczącej sprzętu.
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+
+// POCZĄTEK SEKCJI FUNKCJI
+[#functions]
+--
+
+'''
+
+[float]
+=== Funkcje
+// Lista wszystkich funkcji odnoszących się do tego elementu, ►►►►► TA SEKCJA JEST OBOWIĄZKOWA ◄◄◄◄◄
+http://arduino.cc[if] (Serial) +
+http://arduino.cc[available()] +
+http://arduino.cc[begin()] +
+http://arduino.cc[end()] +
+http://arduino.cc[find()] +
+http://arduino.cc[findUntil()] +
+http://arduino.cc[flush()] +
+http://arduino.cc[parseFloat()] +
+http://arduino.cc[parseInt()] +
+http://arduino.cc[peek()] +
+http://arduino.cc[print()] +
+http://arduino.cc[println()] +
+http://arduino.cc[read()] +
+http://arduino.cc[readBytes()] +
+http://arduino.cc[readBytesUntil()] +
+http://arduino.cc[setTimeout()] +
+http://arduino.cc[write()] +
+http://arduino.cc[serialEvent()]
+
+'''
+
+--
+// KONIEC SEKCJI FUNKCJI
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#seealso]
+--
+
+[float]
+=== Zobacz także
+// Istotna kategoria treści np. inne pojęcie w dokumentacji (proszę dodać znacznik #JĘZYK#),
+// definicje (proszę dodać znacznik #DEFINICJA#), oraz przykłady Projektów i Samouczków
+// przykłady: (proszę dodać znacznik #PRZYKŁAD#)  ►►►►► TA SEKCJA JEST OBOWIĄZKOWA ◄◄◄◄◄
+
+
+[role="language"]
+// Zawsze gdy chcesz dać odnośnik do innego pojęcia z Dokumentacji, lub ogólnie użyć odnośnika względnego,
+// użyj składni pokazanej poniżej. Pamiętaj, że format pliku będzie określony przez atrybut.
+// Pamiętaj, że zawsze musisz zastąpić odstępy w nazwach plików lub katalogów ciągiem %20.
+// Cały odnośnik do stron w dokumentacji musi być pisany małymi literami, niezależnie od pisowni plików i katalogów.
+* #JĘZYK# link:../AsciiDoc_Template-Single_Entity[Pojedyńczy Element]
+* #JĘZYK# link:../../AsciiDoc_Dictionary/AsciiDoc_Template-Dictionary[Wzorzec słownika AsciiDoc]
+
+[role="definition"]
+// Należy pamiętać, że wszystkie odnośniki do materiałów zewnętrznych muszą być otwierane w nowym oknie/karcie poprzez dodanie
+// znaku ^ zaraz po ostatnim nawiasie kwadratowym
+* #DEFINICJA# http://arduino.cc/en/Tutorial/PWM[PWM^]
+
+[role="example"]
+// Należy pamiętać, że wszystkie odnośniki do materiałów zewnętrznych muszą być otwierane w nowym oknie/karcie poprzez dodanie
+// znaku ^ zaraz po ostatnim nawiasie kwadratowym
+* #PRZYKŁAD# http://arduino.cc/en/Tutorial/Blink[Blink^]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

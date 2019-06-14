@@ -1,0 +1,72 @@
+---
+title: loop()
+categories: [ "Struktura" ]
+subCategories: [ "Szkic" ]
+---
+
+
+
+
+
+= loop()
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Po wykonaniu funkcji link:../setup[setup()], która inicjuje i ustawia wartości początkowe,
+ funkcja `loop()` (ang. pętla) robi dokładnie to co sugeruje jej nazwa,
+ czyli wykonuje się nieustannie, umożliwiając twojemu programowi na kontrolę zachowania się płytki Arduino poprzez
+ wykonywanie różnych działań i reagowanie na zdarzenia.
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+[source,arduino]
+----
+int stykPrzycisku = 3;
+
+// setup inicjuje łącze szeregowe oraz styk przycisku
+void setup() {
+  Serial.begin(9600);
+  pinMode(stykPrzycisku, INPUT);
+}
+
+// loop sprawdza przycisk za każdym razem
+// i przesyła przez łącze szeregowe jego stan
+void loop() {
+  if (digitalRead(stykPrzycisku) == HIGH) {
+    Serial.write('H');
+  }
+  else {
+    Serial.write('L');
+  }
+
+  delay(1000);
+}
+----
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE

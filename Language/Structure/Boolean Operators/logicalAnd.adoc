@@ -1,0 +1,64 @@
+---
+title: "&&"
+title_expanded: logiczne I
+categories: [ "Struktura" ]
+subCategories: [ "Operatory logiczne" ]
+---
+
+
+
+
+
+= && logiczne I
+
+
+// POCZĄTEK SEKCJI OPISOWEJ
+[#overview]
+--
+
+[float]
+=== Opis
+Rezultaten *Logicznego I* jest `prawda` *tylko wtedy* gdy oba parametry są `prawdziwe`.
+[%hardbreaks]
+
+--
+// KONIEC SEKCJI OPISOWEJ
+
+
+
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
+[#howtouse]
+--
+
+[float]
+=== Przykładowy kod
+Ten operator może być używany wewnątrz warunku instrukcji link:../../control-structure/if[if].
+
+[source,arduino]
+----
+if (digitalRead(2) == HIGH && digitalRead(3) == HIGH) { // jeśli z OBU przełączników odczytany będzie stan wysoki (HIGH)
+  // instrukcje
+}
+----
+[%hardbreaks]
+
+[float]
+=== Uwagi i ostrzeżenia
+Upewnij się, że nie mylisz operatora logicznego I, && (podwójny znak &) z operatorem bitowym I (pojedynczy znak &). To zupełnie inne bestie.
+
+--
+// KONIEC SEKCJI JAK UŻYWAĆ
+
+
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
+[#see_also]
+--
+
+[float]
+=== Zobacz także
+
+[role="language"]
+* #JĘZYK# link:../../bitwise-operators/bitwiseand[& (bitowe i)]
+
+--
+// KONIEC SEKCJI ZOBACZ TAKŻE
