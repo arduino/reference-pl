@@ -1,134 +1,136 @@
 ---
-title: Entity Title
-title_expanded: Less Than or Equal To
-categories: [ "Structure" ]
-subCategories: [ "Subcategory Name" ]
+title: Tytuł Elementu
+title_expanded: Mniejsze bądź równe
+categories: [ "Struktura" ]
+subCategories: [ "Nazwa podkategorii" ]
 ---
-// ARDUINO LANGUAGE REFERENCE TAGS (above)   ►►►►► ALWAYS INCLUDE IN YOUR FILE ◄◄◄◄◄
-// title will show up in the Index of all Reference terms
-// If the title is an operator write it out in words in title_expanded
-// categories: Pick between Structure, Variable or Function
-// The subcategory within the ones available in the index ("Digital I/O", "Arithmetic Operators")
+// ZNACZNIK DOKUMENTACJI JĘZYKA ARDUINO (powyższy)   ►►►►► ZAWSZE UMIESZCZAJ W SWOIM PLIKU ◄◄◄◄◄
+// title: pojawi się w Indeksie wszystkich pojęć dokumentacji
+// Jeśli title jest operatorem, zapisz go słowami w title_expanded
+// categories: wybór pomiędzy: Struktura, Zmienne, Funkcje
+// subCategories: w ramach dostępnych w indeksie ("Cyfrowe We/Wy", "Operatory Arytmetyczne")
 
 
 
 
 
-// PAGE TITLE
-= title
+// TYTUŁ STRONY
+= tytuł
 
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-// Describe what this Reference term does, and what it is used for	►►►►► THIS SECTION IS MANDATORY ◄◄◄◄◄
-Writes an analog value (http://arduino.cc/en/Tutorial/PWM[PWM wave]) to a pin. Can be used to light a LED at varying brightnesses or drive a motor at various speeds. After a call to `analogWrite()`, the pin will generate a steady square wave of the specified duty cycle until the next call to `analogWrite()` (or a call to `digitalRead()` or `digitalWrite()` on the same pin). The frequency of the PWM signal on most pins is approximately 490 Hz. On the Uno and similar boards, pins 5 and 6 have a frequency of approximately 980 Hz.
+=== Opis
+// Opis czym jest ten termin w dokumentacji i do czego służy ►►►►► TA SEKCJA JEST OBOWIĄZKOWA ◄◄◄◄◄
+Wpisuje wartość analogową (http://arduino.cc/en/Tutorial/PWM[modulacja PWM]) do styku. Może być używane do włączania diod świecących z różną jasnością lub napędzania silnika różnymi prędkościami. Po wywołaniu `analogWrite()` na styku generowana jest fala prostokątna o określonym stopniu wypełnienia aż do następnego wywołania `analogWrite()` (albo wywołania `digitalRead()` lub `digitalWrite()` dla tego samego styku). Częstotliwość sygnału PWM na większości styków wynosi około 490 Hz. Na płytkach Uno i podobnych, styki 5 i 6 pracują z częstotliwością około 980 Hz.
 [%hardbreaks]
 
-image::http://arduino.cc/en/uploads/Main/ArduinoUno_R3_Front_450px.jpg[caption="", title="A beautiful Arduino UNO"]
+image::http://arduino.cc/en/uploads/Main/ArduinoUno_R3_Front_450px.jpg[caption="", title="Piękne Arduino UNO"]
 [%hardbreaks]
 
 
 [float]
-=== Syntax
-// Enter Reference term syntax, please specify all available parameters  ►►►►► THIS SECTION IS MANDATORY ◄◄◄◄◄
-`analogWrite(pin, value)`
+=== Składnia
+// Wprowadź składnię terminu w dokumentacji, podaj wszystkie dostępne parametry  ►►►►► TA SEKCJA JEST OBOWIĄZKOWA ◄◄◄◄◄
+`analogWrite(styk, wartość)`
 
 
 [float]
-=== Parameters
-// List all available parameters, please describe them one by one adding the data type (e.g int, boolean, char, String, float, long, double...)  ►►►►► THIS SECTION IS MANDATORY FOR FUNCTIONS ◄◄◄◄◄
-`pin`: the number of the pin to write to. Allowed data types: int. +
-`value`: the duty cycle between 0 (always off) and 255 (always on). Allowed data types: int.
+=== Parametry
+// Lista wszystkich dostępnych parametrów, proszę opisać je pojedynczo, dodając typ danych (np. int, boolean, char, String, float, long, double...)  ►►►►► TA SEKCJA JEST OBOWIĄZKOWA DLA FUNKCJI ◄◄◄◄◄
+`styk`: numer styku do zapisu. Dozwolone typy danych: int. +
+`wartość`: stopień wypełnienia między 0 (zawsze wyłączone) a 255 (zawsze włączone). Dozwolone typy danych: int.
 
 
 [float]
-=== Returns
-// Enter what the function returns (e.g. HIGH or LOW), if there is no return please write: _Nothing_   ►►►►► THIS SECTION IS MANDATORY FOR FUNCTIONS ◄◄◄◄◄
-Nothing
+=== Wartości zwracane
+// Podaj co funkcja zwraca (np. HIGH lub LOW), jeśli nic nie zwraca, napisz: _Nic_   ►►►►► TA SEKCJA JEST OBOWIĄZKOWA DLA FUNKCJI ◄◄◄◄◄
+Nic
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
-// Describe what the example code is all about and add relevant code   ►►►►► THIS SECTION IS MANDATORY ◄◄◄◄◄
-Sets the output to the LED proportional to the value read from the potentiometer.
+=== Przykładowy kod
+// Opisz, na jak działa przykładowy kod i go dodaj   ►►►►► TA SEKCJA JEST OBOWIĄZKOWA ◄◄◄◄◄
+Ustawia wartość na wyjściu dla diody proporcjonalną do wartości odczytanej z potencjometru.
 
 
 [source,arduino]
-// Add relevant code that exemplify the use of the Reference term,
-// Please note that sometimes when copy-pasting code, a few spaces can be added at the beginnng of each line of code.
-// If that happens, please remove the extra spaces. Thanks!
+// Dodaj odpowiedni kod, który jest przykładem użycia danego terminu
+// Pamiętaj, że czasami podczas wklejania kodu może dodać się kilka odstępów na początku każdego wiersza.
+// Jeśli się tak stanie, usun proszę dodatkowe te odstępy. Dzięki!
 ----
-int ledPin = 9;      // LED connected to digital pin 9
-int analogPin = 3;   // potentiometer connected to analog pin 3
-int val = 0;         // variable to store the read value
+int stykDiody = 9;     // dioda świecąca podłączona do cyfrowego styku nr 9
+int stykAnalogowy = 3; // potencjometr podłączony do analogowego styku nr 3
+int wart = 0;          // zmienna używana do przechowywania odczytanej wartości
 
 void setup() {
-  pinMode(ledPin, OUTPUT);   // sets the pin as output
+  pinMode(stykDiody, OUTPUT);   // ustawia styk jako wyjściowy
 }
 
 void loop() {
-  val = analogRead(analogPin);   // read the input pin
-  analogWrite(ledPin, val / 4);  // analogRead values go from 0 to 1023, analogWrite values from 0 to 255
+  wart = analogRead(stykAnalogowy);   // odczytuje ze styku wejściowego
+  analogWrite(stykDiody, wart / 4);  // wartości analogRead są z zakresu 0 do 1023, wartości analogWrite z zakresu 0 do 255
 }
 ----
 [%hardbreaks]
 
 
 [float]
-=== Notes and Warnings
-// Add useful notes, tips, caveat, known issues, and warnings about this Reference term
-This is because of interactions with the `millis()` and `delay()` functions.
+=== Uwagi i Ostrzeżenia
+// Dodaj przydatne uwagi, wskazówki, zastrzeżenia, znane problemy i ostrzeżenia dotyczące tego terminu
+Wynika to z wzajemnego oddziaływania funkci `millis()` i `delay()`.
 [%hardbreaks]
-image::http://arduino.cc/en/uploads/Main/ArduinoUno_R3_Front_450px.jpg[caption="", title="A beautiful Arduino UNO"]
+image::http://arduino.cc/en/uploads/Main/ArduinoUno_R3_Front_450px.jpg[caption="", title="Piękne Arduino UNO"]
 [%hardbreaks]
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
-// SEE ALSO SECTION
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
-// Link relevant content by category, such as other Reference terms (please add the tag #LANGUAGE#),
-// definitions: (please add the tag #DEFINITION#), and examples of Projects and Tutorials
-// examples: (please add the tag #EXAMPLE#)
+=== Zobacz także
+// Istotna kategoria treści np. inne pojęcie w dokumentacji (proszę dodać znacznik #JĘZYK#),
+// definicje (proszę dodać znacznik #DEFINICJA#), oraz przykłady Projektów i Samouczków
+// przykłady: (proszę dodać znacznik #PRZYKŁAD#)
 
 
 [role="language"]
-// Whenever you want to link to another Reference term, or more in general to a relative link,
-// use the syntax shown below. Please note that the file format is subsituted by  attribute.
-// Please note that you always need to replace spaces that you might find in folder/file names with %20
-// The entire link to Reference pages must be lower case, regardless of the case of the folders and files in this repository.
-// For language tag, items will be automatically generated for any other item of the same subcategory,
-// no need to add links to other pages of the same subcategory
-// if you don't include this section, a minimal version with only the other pages of the same subcategory will be generated.
-* #LANGUAGE# link:../AsciiDoc_Template-Parent_Of_Entities[Parent Of Entities]
-* #LANGUAGE# link:../../AsciiDoc_Dictionary/AsciiDoc_Template-Dictionary[AsciiDoc Template Dictionary]
+// Zawsze gdy chcesz dać odnośnik do innego pojęcia z Dokumentacji, lub ogólnie użyć odnośnika względnego,
+// użyj składni pokazanej poniżej. Pamiętaj, że format pliku będzie określony przez atrybut.
+// Pamiętaj, że zawsze musisz zastąpić odstępy w nazwach plików lub katalogów ciągiem %20.
+// Cały odnośnik do stron w dokumentacji musi być pisany małymi literami, niezależnie od pisowni plików i katalogów.
+// W przypadku znaczników językowych elementy zostaną automatycznie wygenerowane dla dowolnego innego elementu tej
+// samej podkategorii, nie ma potrzeby dodawania odnośników do innych stron tej samej podkategorii
+// jeśli nie uwzględnisz tej sekcji, zostanie wygenerowana minimalna wersja tylko z innymi stronami tej samej podkategorii.
+* #JĘZYK# link:../AsciiDoc_Template-Parent_Of_Entities[Wzór Elementów]
+* #JĘZYK# link:../../AsciiDoc_Dictionary/AsciiDoc_Template-Dictionary[Wzorzec słownika AsciiDoc]
 
 [role="definition"]
-// Please note that all external links need to be opened in a new window/tab by adding ^ right before the last square brackets
-* #DEFINITION# http://arduino.cc/en/Tutorial/PWM[PWM^]
+// Należy pamiętać, że wszystkie odnośniki do materiałów zewnętrznych muszą być otwierane w nowym oknie/karcie poprzez dodanie
+// znaku ^ zaraz po ostatnim nawiasie kwadratowym
+* #DEFINICJA# http://arduino.cc/en/Tutorial/PWM[PWM^]
 
 [role="example"]
-// Please note that all external links need to be opened in a new window/tab by adding ^ right before the last square brackets
-* #EXAMPLE# http://arduino.cc/en/Tutorial/Blink[Blink^]
+// Należy pamiętać, że wszystkie odnośniki do materiałów zewnętrznych muszą być otwierane w nowym oknie/karcie poprzez dodanie
+// znaku ^ zaraz po ostatnim nawiasie kwadratowym
+* #PRZYKŁAD# http://arduino.cc/en/Tutorial/Blink[Blink^]
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

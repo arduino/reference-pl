@@ -1,86 +1,86 @@
 ---
 title: "/"
-title_expanded: "division"
-categories: [ "Structure" ]
-subCategories: [ "Arithmetic Operators" ]
+title_expanded: "dzielenie"
+categories: [ "Struktura" ]
+subCategories: [ "Operatory arytmetyczne" ]
 ---
 
 
 
 
 
-= / Division
+= / Dzielenie
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-*Division* is one of the four primary arithmetic operations. The operator `/` (slash) operates on two operands to produce the result.
+=== Opis
+*Dzielenie* jest jednym z czterech podstawowych działań atytmetycznych. Operator `/` (ukośnik) działa na dwóch argumentach aby aby obliczyć ich iloraz.
 [%hardbreaks]
 
 
 [float]
-=== Syntax
-`result = numerator / denominator;`
+=== Składnia
+`iloraz = dzielna / dzielnik;`
 
 
 [float]
-=== Parameters
-`result`: variable. Allowed data types: `int`, `float`, `double`, `byte`, `short`, `long`. +
-`numerator`: variable or constant. Allowed data types: `int`, `float`, `double`, `byte`, `short`, `long`. +
-`denominator`: *non zero* variable or constant. Allowed data types: `int`, `float`, `double`, `byte`, `short`, `long`.
+=== Parametry
+`iloraz`: zmienna. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`dzielna`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`dzielnik`: *nie zero* zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`.
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
+=== Przykładowy kod
 
 [source,arduino]
 ----
 int a = 50;
 int b = 10;
 int c = 0;
-c = a / b;  // the variable 'c' gets a value of 5 after this statement is executed
+c = a / b;  // zmienna 'c' otrzyma wartość 5 po wykonaniu tych instrukcji
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-1. If one of the numbers (operands) are of the type float or of type double, floating point math will be used for the calculation.
+=== Uwagi i Ostrzeżenia
+1. Jeśli jedna z liczb (argumentów) będzie typu float/double to do obliczeń zostanie użyta arytmetyka zmiennoprzecinkowa.
 
-2. If the operands are of float / double data type and the variable that stores the result is an integer, then only the integral part is stored and the fractional part of the number is lost.
+2. Jeśli argumenty będą typu float/double, a zmienna przechowująca iloraz będzie liczbą całkowitą, wówczas zapisana zostanie tylko część całkowita liczby a część ułamkowa będzie utracona.
 
 [source,arduino]
 ----
 float a = 55.5;
 float b = 6.6;
 int c = 0;
-c = a / b;  // the variable 'c' stores a value of 8 only as opposed to the expected result of 8.409
+c = a / b;  // zmienna 'c' otrzyma wartość 8 zamiast spodziewanego wyniku 8,409
 ----
 [%hardbreaks]
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
-// SEE ALSO SECTION STARTS
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="language"]
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ

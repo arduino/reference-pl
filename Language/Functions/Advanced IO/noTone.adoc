@@ -1,8 +1,8 @@
 ---
 title: noTone()
 title_expanded: ""
-categories: [ "Functions" ]
-subCategories: [ "Advanced I/O" ]
+categories: [ "Funkcje" ]
+subCategories: [ "Zaawansowane We/Wy" ]
 aliases: [ /language/functions/advanced-io/noTone/ ]
 ---
 
@@ -10,54 +10,54 @@ aliases: [ /language/functions/advanced-io/noTone/ ]
 = noTone()
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-Stops the generation of a square wave triggered by `tone()`. Has no effect if no tone is being generated.
+=== Opis
+Zatrzymuje generowanie dźwięku wyzwolone przez `tone()`. Nie ma znaczenia, czy dźwięk został wygenerowany czy nie.
 [%hardbreaks]
 
 
 [float]
-=== Syntax
-`noTone(pin)`
+=== Składnia
+`noTone(styk)`
 
 
 [float]
-=== Parameters
-`pin`: the Arduino pin on which to stop generating the tone
+=== Parametry
+`styk`: styk, dla którego chcesz zatrzymać dźwięk
 
 [float]
-=== Returns
-Nothing
+=== Wartości zwracane
+Nic
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Notes and Warnings
-If you want to play different pitches on multiple pins, you need to call noTone() on one pin before calling `tone()` on the next pin.
+=== Uwagi i Ostrzeżenia
+Jeśli chcesz odtwarzać różne dźwięki na wielu stykach, musisz najpierw zatrzymać dźwięk za pomocą `noTone()` na jednym styku, a następnie wygenerować nowy dźwięk za pomocą `tone()` na innym styku.
 [%hardbreaks]
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
-// SEE ALSO SECTION
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

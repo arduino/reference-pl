@@ -1,7 +1,7 @@
 ---
 title: pinMode()
-categories: [ "Functions" ]
-subCategories: [ "Digital I/O" ]
+categories: [ "Funkcje" ]
+subCategories: [ "Cyfrowe We/Wy" ]
 ---
 
 
@@ -11,79 +11,79 @@ subCategories: [ "Digital I/O" ]
 = pinMode()
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-Configures the specified pin to behave either as an input or an output. See the http://arduino.cc/en/Tutorial/DigitalPins[Digital Pins] page for details on the functionality of the pins.
+=== Opis
+Konfiguruje określony styk, aby zachowywał się jako wejście lub wyjście. Szczegółowe informacje na temat funkcjonalności styków można znaleźć na stronie http://arduino.cc/en/Tutorial/DigitalPins[ Styków cyfrowych].
 [%hardbreaks]
-As of Arduino 1.0.1, it is possible to enable the internal pullup resistors with the mode INPUT_PULLUP. Additionally, the INPUT mode explicitly disables the internal pullups.
+Począwszy od Arduino 1.0.1, możliwe jest włączenie wewnętrznych rezystorów podciągających w trybie INPUT_PULLUP. Dodatkowo tryb INPUT jawnie wyłącza podciągnięcie wewnętrzne.
 [%hardbreaks]
 
 
 [float]
-=== Syntax
-`pinMode(pin, mode)`
+=== Składnia
+`pinMode(styk, tryb)`
 
 
 [float]
-=== Parameters
-`pin`: the Arduino pin number to set the mode of. +
-`mode`: `INPUT`, `OUTPUT`, or `INPUT_PULLUP`. See the http://arduino.cc/en/Tutorial/DigitalPins[Digital Pins] page for a more complete description of the functionality.
+=== Parametry
+`styk`: numer styku, którego tryb chcesz ustawić. +
+`tryb`: `INPUT`, `OUTPUT`, lub `INPUT_PULLUP`. Zobacz stronę http://arduino.cc/en/Tutorial/DigitalPins[Styki cyfrowe], aby uzyskać pełniejszy opis funkcjonalności.
 
 
 [float]
-=== Returns
-Nothing
+=== Wartości zwracane
+Nic
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
-The code makes the digital pin 13 `OUTPUT` and Toggles it `HIGH` and `LOW`
+=== Przykładowy kod
+Ten kod ustawia cyfrowy styk 13 jako wyjście (`OUTPUT`) i przełącza go w stan wysoki (`HIGH`) a nastęþnie niski (`LOW`)
 
 [source,arduino]
 ----
 void setup() {
-  pinMode(13, OUTPUT);    // sets the digital pin 13 as output
+  pinMode(13, OUTPUT);    // ustawia styk cyfrowy nr 13 jako wyjście
 }
 
 void loop() {
-  digitalWrite(13, HIGH); // sets the digital pin 13 on
-  delay(1000);            // waits for a second
-  digitalWrite(13, LOW);  // sets the digital pin 13 off
-  delay(1000);            // waits for a second
+  digitalWrite(13, HIGH); // ustaw styk cyfrowy nr 13 w stan wysoki
+  delay(1000);            // czekaj jedną sekundę
+  digitalWrite(13, LOW);  // ustaw styk cyfrowy nr 13 w stan niski
+  delay(1000);            // czekaj jedną sekundę
 }
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-The analog input pins can be used as digital pins, referred to as A0, A1, etc.
+=== Uwagi i ostrzeżenia
+Analogowe styki wejściowe mogą być używane jako styki cyfrowe, określane jako A0, A1 itp.
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
-// SEE ALSO SECTION
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="example"]
-* #EXAMPLE# http://arduino.cc/en/Tutorial/DigitalPins[Description of the digital pins^]
+* #PRZYKŁAD# http://arduino.cc/en/Tutorial/DigitalPins[Opis styków cyfrowych^]
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

@@ -1,64 +1,64 @@
 ---
 title: "&&"
-title_expanded: logical and
-categories: [ "Structure" ]
-subCategories: [ "Boolean Operators" ]
+title_expanded: logiczne I
+categories: [ "Struktura" ]
+subCategories: [ "Operatory logiczne" ]
 ---
 
 
 
 
 
-= && Logical AND
+= && logiczne I
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-*Logical AND* results in `true` *only* if both operands are `true`.
+=== Opis
+Rezultaten *Logicznego I* jest `prawda` *tylko wtedy* gdy oba parametry są `prawdziwe`.
 [%hardbreaks]
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
-This operator can be used inside the condition of an link:../../control-structure/if[if] statement.
+=== Przykładowy kod
+Ten operator może być używany wewnątrz warunku instrukcji link:../../control-structure/if[if].
 
 [source,arduino]
 ----
-if (digitalRead(2) == HIGH && digitalRead(3) == HIGH) { // if BOTH the switches read HIGH
-  // statements
+if (digitalRead(2) == HIGH && digitalRead(3) == HIGH) { // jeśli z OBU przełączników odczytany będzie stan wysoki (HIGH)
+  // instrukcje
 }
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-Make sure you don't mistake the boolean AND operator, && (double ampersand) for the bitwise AND operator & (single ampersand). They are entirely different beasts.
+=== Uwagi i ostrzeżenia
+Upewnij się, że nie mylisz operatora logicznego I, && (podwójny znak &) z operatorem bitowym I (pojedynczy znak &). To zupełnie inne bestie.
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
-// SEE ALSO SECTION
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="language"]
-* #LANGUAGE# link:../../bitwise-operators/bitwiseand[& (Bitwise AND)]
+* #JĘZYK# link:../../bitwise-operators/bitwiseand[& (bitowe i)]
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

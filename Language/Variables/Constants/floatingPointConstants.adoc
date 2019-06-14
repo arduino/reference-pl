@@ -1,5 +1,5 @@
 ---
-title: Floating Point Constants
+title: Stałe zmiennoprzecinkowe
 categories: [ "Variables" ]
 subCategories: [ "Constants" ]
 ---
@@ -8,7 +8,7 @@ subCategories: [ "Constants" ]
 
 
 
-= Floating Point Constants
+= Stałe zmiennoprzecinkowe
 
 
 // OVERVIEW SECTION STARTS
@@ -16,8 +16,8 @@ subCategories: [ "Constants" ]
 --
 
 [float]
-=== Description
-Similar to integer constants, floating point constants are used to make code more readable. Floating point constants are swapped at compile time for the value to which the expression evaluates.
+=== Opis
+Podobnie jak stałe całkowite, również stałe zmiennoprzecinkowe są używane do zwiększenia czytelności kodu. W czasie kompilacji stałe zmiennoprzecinkowe są zamieniane na wartość, dla której obliczane jest wyrażenie.
 [%hardbreaks]
 
 --
@@ -30,21 +30,21 @@ Similar to integer constants, floating point constants are used to make code mor
 --
 
 [float]
-=== Example Code
+=== Przykładowy kod
 
 [source,arduino]
 ----
-n = 0.005;  // 0.005 is a floating point constant
+n = 0.005;  // 0.005 to stała zmiennoprzecinkowa
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-Floating point constants can also be expressed in a variety of scientific notation. 'E' and 'e' are both accepted as valid exponent indicators.
+=== Uwagi i ostrzeżenia
+Stałe zmiennoprzecinkowe mogą być również wyrażone w różnych notacjach naukowych. „E” i „e” są akceptowane jako prawidłowe wskaźniki wykładnika.
 [%hardbreaks]
 
 |===
-|floating-point constant |evaluates to: |also evaluates to:
+|stała zmiennoprzecinkowa |obliczane jako: |również obliczane jako:
 
 |10.0
 |10
@@ -72,7 +72,7 @@ Floating point constants can also be expressed in a variety of scientific notati
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="language"]
 

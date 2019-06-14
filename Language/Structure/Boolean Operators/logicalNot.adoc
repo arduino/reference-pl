@@ -1,72 +1,72 @@
 ---
 title: "!"
-title_expanded: logical not
-categories: [ "Structure" ]
-subCategories: [ "Boolean Operators" ]
+title_expanded: logiczne NIE
+categories: [ "Struktura" ]
+subCategories: [ "Operatory logiczne" ]
 ---
 
 
 
 
 
-= ! Logical NOT
+= ! Logiczne NIE
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-*Logical NOT* results in a `true` if the operand is `false` and vice versa.
+=== Opis
+Rezultatem *Logicznego NIE* jest `prawda` jeśli argument jest `fałszywy` i odwrotnie.
 [%hardbreaks]
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
-This operator can be used inside the condition of an link:../../control-structure/if/[if] statement.
+=== Przykładowy kod
+Ten operator może być używany wewnątrz warunku instrukcji link:../../control-structure/if/[if].
 
 [source,arduino]
 ----
-if (!x) { // if x is not true
-  // statements
+if (!x) { // jeśli x nie jest prawdziwe to wykonaj poniższe instrukcje
+  // instrukcje
 }
 ----
 
-It can be used to invert the boolean value.
+Można go użyć do zmiany wartości logicznej na przeciwną.
 [source,arduino]
 ----
-x = !y; // the inverted value of y is stored in x
+x = !y; // przeciwna logicznie wartość y wpisana jest do x
 ----
 
 
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-The bitwise not ~ (tilde) looks much different than the boolean not ! (exclamation point or "bang" as the programmers say) but you still have to be sure which one you want where.
+=== Uwagi i ostrzeżenia
+Bitowe nie ~ (fala/tylda) wygląda zupełnie inaczej niż logiczne nie ! (wykrzyknik), ale upewnij się, do czego chcesz tego użyć.
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
-// SEE ALSO SECTION
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="language"]
-* #LANGUAGE# link:../../bitwise-operators/bitwisenot[~ Bitwise NOT]
+* #JĘZYK# link:../../bitwise-operators/bitwisenot[~ bitowe NIE]
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

@@ -1,161 +1,161 @@
 
 
 
-// This is a documentation file for authors and editors of the Arduino Manutius content platform.
-// Below you can find a list of all the possible page elements with the corresponding
-// AsciiDoc syntax
+// Jest to plik dokumentacji dla autorów i redaktorów platformy treści Arduino Manutius.
+// Poniżej znajduje się lista wszystkich możliwych elementów strony z odpowiadającą im
+// składnią AsciiDoc
 
 
-// GENERAL GUIDELINES
-// The [space]+ sends text to a new line, aka it generates a <br> in the HTML output, e.g.:
-// This is some text. +
-// This is some other text in a new line
+// OGÓLNE WYTYCZNE
+// [Odstęp] + wysyła tekst do nowej linii, to znaczy generuje znak <br> na wyjściu HTML, np .:
+// To jest jakiś napis. +
+// To jest jakiś napis w nowej linii
 
-// The [%hardbreaks] generates a new <p> paragraph, e.g.:
-// This is a <p> paragraph
+// [%hardbreaks] generuje nowy akapit <p>, np.:
+// To jest <p> akapit
 // [%hardbreaks]
-// This is another <p> paragraph
+// To jest następny akapit <p>
 
-// If you need to add a blank line between sections of the page you can use:
+// Jeśli chcesz dodać pustą linię między sekcjami strony, możesz użyć:
 // {empty} +
 
-// Using [%hardbreaks] at the end of a chunk is always a good practice.
-// [%hardbreaks] close the HTML tags, making the HTML output clean.
+// Dobrą praktyką jest używanie [%hardbreaks] na końcu.
+// [%hardbreaks] zamyka znaczniki HTMLs, tworząc czysty wyjściowy kod HTML.
 
-// This ''' is a line divider
+// To ''' oddziela linie
 
 
-// PAGE TITLE
-= Page Title [h1]
+// TYTUŁ STRONY
+= Tytuł strony [h1]
 
-// SECTION DIV WITH ID STARTS
-[#name_of_id]
+// POCZĄTEK CZĘŚCI DIV Z IDentyfikatorem
+[#nazwa_id]
 --
 
-// Add your content here.
+// Dodaj tutaj swoje treści...
 
-// In case your output is an HTML file, this tag will create a wrapper div with the id specified, e.g.:
-// <div id="name_of_id" class="openblock"></div>
+// W przypadku, gdy dane wyjściowe są plikiem HTML, ten znacznik utworzy opakowanie div o podanym identyfikatorze, np .:
+// <div id="nazwa_id" class="openblock"></div>
 
 --
-// SECTION DIV WITH ID ENDS
+// KONIEC CZĘŚCI DIV Z IDentyfikatorem
 
 
-// OTHER TITLES
+// INNE TYTUŁY
 [float]
-== Section Title [h2]
-
-[float]
-=== Paragraph Title [h3]
+== Tytuł Sekcji [h2]
 
 [float]
-==== Sub-paragraph Title [h4]
+=== Tytuł akapitu [h3]
+
+[float]
+==== Tytuł pod-akapitu [h4]
 
 
 '''
 
-// TEXT STYLES
-This is normal <p> text +
-*This is bold <strong> text* +
-_This is italic <em> text_ +
-*_This is bold+italic <strong><em> text_* +
-[small]#This is small <span class="small"> text# +
-#This is highlighted <mark> text# +
-'`This is single quoted text`' +
-"`This is double quoted text`"
+// STYLE NAPISÓW
+To jest normalny <p> napis +
+*To jest wytłuszczony <strong> napis* +
+_To jest pochylony <em> napis_ +
+*_To jest wytłuszczony+pochylony <strong><em> napis_* +
+[small]#To jest mały <span class="small"> napis# +
+#To jest zaznaczony <mark> napis# +
+'`To jest napis w pojedynczym cudzysłowie`' +
+"`To jest napis w podwójnym cudzysłowie`"
 [%hardbreaks]
 
 '''
 
-// LINKS
-// Please note that all external links need to be opened in a new window/tab by adding ^ right before the last square brackets
-http://arduino.cc[This is an external <a href> link^] in a new tab +
-link:../index.html[This is a relative <a href> link] +
-mailto:webmaster@arduino.cc[This is an e-mail link]
+// LĄCZA
+// Należy pamiętać, że wszystkie łącza zewnętrzne muszą być otwierane w nowym oknie/zakładce, dodając ^ tuż przed ostatnim nawiasem kwadratowym
+http://arduino.cc[To jest zewnętrzne <a href> łącze^] w nowej karcie +
+link:../index.html[To jest łącze względne <a href>] +
+mailto:webmaster@arduino.cc[To jest łącze do adresu e-mail]
 [%hardbreaks]
 
 '''
 
-// LISTS
-* This
-* is
-** an
-*** unordered
-* list
+// LISTY
+* To
+* jest
+** jakaś
+*** nienumerowana
+* lista
 
 [%hardbreaks]
 
-. This
-. is
-.. a
-.. n
-... orde
-... red
-. list
+. To
+. jest
+.. ja-
+.. -kaś
+... nume-
+... -rowana
+. lista
 
 '''
 
-// CODE
-This is `code` in a sentence +
-`This is a whole line of code` +
+// KOD
+To jest `kod` w zdaniu +
+`To jest cała linijka kodu` +
 
-// HINT: Please note that sometimes when copy-pasting code a few spaces can be added at the beginnng of each line of code.
-// If that happens, please remove the extra spaces. Thanks!
+// WSKAZÓWKA: Należy pamiętać, że czasem podczas kopiowania i wklejania kodu może dodpisać się kilka odstępów na początku każdego wiersza kodu.
+// Jeśli się tak stanie, to usuń te dodatkowe odstępy.
 
-This can be a lot more code
+Może to być dużo więcej kodu
 [source,arduino]
 ----
 for (int i = 0; i <= 99; i++) {
-  Serial.println('We want more code!');
+  Serial.println('Chcemy więcej kodu!');
 }
 ----
 [%hardbreaks]
 
 '''
 
-// TABLES
+// TABELE
 |===
-|Name of Column 1 |Name of Column 2 |Name of Column 3
+|Nazwa kolumny 1 |Nazwa kolumny 2 |Nazwa kolumny 3
 
-|Cell in column 1, row 1
-|Cell in column 2, row 1
-|Cell in column 3, row 1
+|komórka w kolumnie 1, wiersz 1
+|komórka w kolumnie 2, wiersz 1
+|komórka w kolumnie 3, wiersz 1
 
-|Cell in column 1, row 2
-|Cell in column 2, row 2
-|Cell in column 3, row 2
+|komórka w kolumnie 1, wiersz 2
+|komórka w kolumnie 2, wiersz 2
+|komórka w kolumnie 3, wiersz 2
 
-|Cell in column 1, row 3
-|Cell in column 2, row 3
-|Cell in column 3, row 3
+|komórka w kolumnie 1, wiersz 3
+|komórka w kolumnie 2, wiersz 3
+|komórka w kolumnie 3, wiersz 3
 |===
 [%hardbreaks]
 
 '''
 
-// IMAGES
+// OBRAZY
 
-// If you need to add an image to the Asciidoc please create a folder called 'attachments' in the same directory as the Asciidoc file,
-// place the image there and reference it as shown below. Images can be in SVG and PNG format, max size 200KB.
+// Jeśli chcesz dodać obraz do Asciidoc, utwórz folder o nazwie „attachments” w tym samym katalogu co plik Asciidoc,
+// umieść tam obraz i odwołaj się do niego jak pokazano poniżej. Obrazy mogą być w formacie SVG i PNG, maksymalny rozmiar to 200 kB.
 
-// To include an image on its own line (i.e., a block image), use the image:: prefix in front of the file name and square brackets after it []
-// Make sure you add [%hardbreaks] between any text and the image
+// Aby dołączyć obraz we własnej linii (tzw. Obraz blokowy), użyj przedrostka image:: przed nazwą pliku i nawiasami kwadratowymi po niej []
+// Upewnij się, że dodajesz [%hardbreaks] między dowolnym tekstem a obrazem
 
-This is a block image with a URL
+To jest obraz blokowy z adresem URL
 [%hardbreaks]
 image::https://store-cdn.arduino.cc/uni/catalog/product/cache/1/image/1040x660/604a3538c15e081937dbfbd20aa60aad/A/0/A000066_featured_2.jpg[]
 
 
-This is an image saved in the attachments folder with a caption
+Jest to obraz zapisany w folderze załączników z podpisem
 [%hardbreaks]
-image::https://www.arduino.cc/reference/en/AsciiDoc_sample/AsciiDoc_Dictionary/attachments/ArduinoUno_R3_Front_450px.jpg[caption="", title="A beautiful Arduino UNO"]
+image::https://www.arduino.cc/reference/en/AsciiDoc_sample/AsciiDoc_Dictionary/attachments/ArduinoUno_R3_Front_450px.jpg[caption="", title="Przepiękne Arduino UNO"]
 
 
 '''
 
-// EMBED
+// OSADZENIA
 
-This is a pretty embed of code from Gist
+To jest ładnieosadzony kod z Gist
 ++++
 <script src="https://gist.github.com/mojavelinux/5333524.js">
 </script>
@@ -163,24 +163,24 @@ This is a pretty embed of code from Gist
 
 {empty} +
 
-And this is another of a video from YouTube
+a to jest jeszcze inny filmz YouTube
 ++++
 <iframe width="100%" height="315" src="https://www.youtube.com/watch?v=6cRFf4qkcTw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 ++++
-// HINT: Please remember to set the iframe width to 100% to have the video responsive on all our platforms
+// WSKAZÓWKA: Pamiętaj, aby ustawić szerokość iframe na 100%, aby film reagował na wszystkie nasze platformy
 
 {empty} +
 
-And here some slides from Sideshare, yay!
+A tu kilka slajdów ze Slideshare, tak!
 ++++
 <iframe src="https://www.slideshare.net/slideshow/embed_code/4430242" width="100%" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/damellis/introduction-to-arduino-4430242" title="Introduction to Arduino" target="_blank">Introduction to Arduino</a> </strong> from <strong><a href="//www.slideshare.net/damellis" target="_blank">David Mellis</a></strong> </div>
 ++++
-// HINT: Please remember to set the iframe width to 100% to have the slide show responsive on all our platforms
+// WSKAZÓWKA: Pamiętaj, aby ustawić szerokość iframe na 100%, aby pokaz slajdów był reagujący na wszystkie nasze platformy
 
 {empty} +
 
-And this is some audio from SoundCloud
+A to jest trochę dźwięku z SoundCloud
 ++++
 <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/55323777&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 ++++
-// HINT: Please remember to set the iframe width to 100% to have the sound UI responsive on all our platforms
+// WSKAZÓWKA: Pamiętaj, aby ustawić szerokość iframe na 100%, aby interfejs dźwiękowy reagował na wszystkie nasze platformy

@@ -1,73 +1,73 @@
 ---
 title: ">="
-title_expanded: greater than or equal to
-categories: [ "Structure" ]
-subCategories: [ "Comparison Operators" ]
+title_expanded: większe bądź równe
+categories: [ "Struktura" ]
+subCategories: [ "Operatory porównania" ]
 ---
 
 
 
 
 
-= >= Greater Than or Equal To
+= >= Większe bądź równe
 
 
-// OVERVIEW SECTION STARTS
+// POCZĄTEK SEKCJI OPISOWEJ
 [#overview]
 --
 
 [float]
-=== Description
-Compares the variable on the left with the value or variable on the right of the operator. Returns true when the operand on the left is greater (bigger) than or equal to the operand on the right. Please note that you may compare variables of different data types, but that could generate unpredictable results, it is therefore recommended to compare variables of the same data type including the signed/unsigned type.
+=== Opis
+Porównuje zmienną po lewej stronie z wartością lub zmienną po prawej stronie operatora. Zwraca wartość prawdziwą, gdy argument po lewej stronie jest większy bądź równy od argumentu po prawej stronie. Należy pamiętać, że można porównywać zmienne różnych typów, ale może to generować nieprzewidywalne wyniki, dlatego zaleca się porównywanie zmiennych tego samego typu, w tym typy ze znakiem i bez znaku.
 [%hardbreaks]
 
 
 [float]
-=== Syntax
-`x >= y; // is true if x is bigger than or equal to y and it is false if x is smaller than y`
+=== Składnia
+`x >= y; // prawda gdy x jest większe bądź równe y a fałsz gdy x jest mniesze od y`
 
 
 [float]
-=== Parameters
-`x`: variable. Allowed data types: `int`, `float`, `double`, `byte`, `short`, `long`. +
-`y`: variable or constant. Allowed data types: `int`, `float`, `double`, `byte`, `short`, `long`.
+=== Parametry
+`x`: zmienna. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`. +
+`y`: zmienna lub stała. Dozwolone typy danych: `int`, `float`, `double`, `byte`, `short`, `long`.
 
 --
-// OVERVIEW SECTION ENDS
+// KONIEC SEKCJI OPISOWEJ
 
 
 
-// HOW TO USE SECTION STARTS
+// POCZĄTEK SEKCJI JAK UŻYWAĆ
 [#howtouse]
 --
 
 [float]
-=== Example Code
+=== Przykładowy kod
 
 [source,arduino]
 ----
-if (x >= y) { // tests if x is greater (bigger) than or equal to y
-  // do something only if the comparison result is true
+if (x >= y) { // sprawdza czy x jest większe bądź równe y
+  // zrób coś tylko gdy porównanie da w wyniku prawdę
 }
 ----
 [%hardbreaks]
 
 [float]
-=== Notes and Warnings
-Positive numbers are greater than negative numbers.
+=== Uwagi i ostrzeżenia
+Liczby dodatnie są większe niż liczby ujemne.
 [%hardbreaks]
 
 --
-// HOW TO USE SECTION ENDS
+// KONIEC SEKCJI JAK UŻYWAĆ
 
 
-// SEE ALSO SECTION
+// POCZĄTEK SEKCJI ZOBACZ TAKŻE
 [#see_also]
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 
 --
-// SEE ALSO SECTION ENDS
+// KONIEC SEKCJI ZOBACZ TAKŻE

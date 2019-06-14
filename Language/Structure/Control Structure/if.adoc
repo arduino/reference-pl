@@ -1,7 +1,7 @@
 ---
 title: if
-categories: [ "Structure" ]
-subCategories: [ "Control Structure" ]
+categories: [ "Struktura" ]
+subCategories: [ "Instrukcje sterujące" ]
 ---
 
 
@@ -15,23 +15,23 @@ subCategories: [ "Control Structure" ]
 [#overview]
 --
 [float]
-=== Description
-The `if` statement checks for a condition and executes the proceeding statement or set of statements if the condition is 'true'.
+=== Opis
+Instrukcja `if` (ang. jeżeli) sprawdza warunek i wykonuje instrukcję lub ciąg instrukcji jeżeli warunek jest prawdziwy.
 [%hardbreaks]
 
 [float]
-=== Syntax
+=== Składnia
 [source,arduino]
 ----
-if (condition) {
-  //statement(s)
+if (warunek) {
+  //instrukcj(-a/-e)
 }
 ----
 
 
 [float]
-=== Parameters
-`condition`: a boolean expression (i.e., can be `true` or `false`).
+=== Parametry
+`warunek`: wyrażenie logiczne (to znaczy, przyjmujące wartość `prawda` (true) lub `fałsz` (false) ).
 
 --
 // OVERVIEW SECTION ENDS
@@ -44,47 +44,49 @@ if (condition) {
 --
 
 [float]
-=== Example Code
+=== Przykładowy kod
 
-The brackets may be omitted after an if statement. If this is done, the next line (defined by the semicolon) becomes the only conditional statement.
+Można pominąć nawiasy klamrowe po wyrażeniu `if`. W takim przypadku następująca potem linia (do znaku średnika) będzie jedyną instrukcją warunkową.
 [%hardbreaks]
 
 [source,arduino]
 ----
-if (x > 120) digitalWrite(LEDpin, HIGH);
+if (x > 120) digitalWrite(stykLED, HIGH);
 
 if (x > 120)
-digitalWrite(LEDpin, HIGH);
+digitalWrite(stykLED, HIGH);
 
-if (x > 120) {digitalWrite(LEDpin, HIGH);}
+if (x > 120) {digitalWrite(stykLED, HIGH);}
 
 if (x > 120) {
-  digitalWrite(LEDpin1, HIGH);
-  digitalWrite(LEDpin2, HIGH);
+  digitalWrite(stykLED1, HIGH);
+  digitalWrite(stykLED2, HIGH);
 }
-// all are correct
+// wszystkie są poprawne
 ----
 [%hardbreaks]
 
 
 [float]
-=== Notes and Warnings
-The statements being evaluated inside the parentheses require the use of one or more operators shown below.
+=== Uwagi i ostrzeżenia
+Instrukcje badane w nawiasie okrągłym wymagają użycia jednego lub więcej operatorów wymienionych poniżej.
 [%hardbreaks]
 
-*Comparison Operators:*
+*Operatory porównania:*
 
- x == y (x is equal to y)
- x != y (x is not equal to y)
- x <  y (x is less than y)
- x >  y (x is greater than y)
- x <= y (x is less than or equal to y)
- x >= y (x is greater than or equal to y)
+ x == y (x jest równe y)
+ x != y (x jest różne od y)
+ x <  y (x jest mniejsze niż y)
+ x >  y (x jest większe niż y)
+ x <= y (x jest mniejsze bądź równe y)
+ x >= y (x jest większe bądź równe y)
 
 
-Beware of accidentally using the single equal sign (e.g. `if (x = 10)` ). The single equal sign is the assignment operator, and sets `x` to 10 (puts the value 10 into the variable `x`). Instead use the double equal sign (e.g. `if (x == 10)` ), which is the comparison operator, and tests _whether_ `x` is equal to 10 or not. The latter statement is only true if `x` equals 10, but the former statement will always be true.
+Uważaj na przypadkowe użycie pojedynczego znaku równości (np. `if (x = 10)` ). Pojedynczy znak równości jest instrukcją przypisania i ustawia wartość `x` na 10 (umieszcza wartość 10 w zmiennej `x`). Zamiast tego użyj podwójnego znaku równości (np. `if (x == 10)` ), który jest operatorem porównania i bada `czy` x jest równe 10 czy nie. Drugie wyrażenie jest prawdziwe tylko wtedy gdy `x` jest równe 10, a pierwsze wyrażenie jest zawsze prawdziwe.
 
-This is because C++ evaluates the statement `if (x=10)` as follows: 10 is assigned to `x` (remember that the single equal sign is the (http://arduino.cc/en/Reference/Assignment[assignment operator^])), so `x` now contains 10. Then the 'if' conditional evaluates 10, which always evaluates to `TRUE`, since any non-zero number evaluates to TRUE. Consequently, `if (x = 10)` will always evaluate to `TRUE`, which is not the desired result when using an 'if' statement. Additionally, the variable `x` will be set to 10, which is also not a desired action.
+Dzieje się tak, dlatego że język C++ oblicza wartość wyrażenia `if (x=10)` następująco: 10 jest przypisywane do `x`
+ (pamiętaj, że pojedyńczy znak równości jest (http://arduino.cc/en/Reference/Assignment[instrukcją przypisania^])), dlatego x ma wartość 10. Następnie warunek `if` oblicza 10, co zawsze oznacza prawdę (TRUE), ponieważ każda niezerowa liczba oznacza prawdę (TRUE). I dlatego, `if (x = 10)` zawsze będzie prawdziwe, co nie jest pożądanym wynikiem w przypadku użycia instrukcji `if`.
+ Dodatkowo zmienna `x` dostanie wartość 10, co również nie jest działaniem pożądanym.
 [%hardbreaks]
 
 --
@@ -98,7 +100,7 @@ This is because C++ evaluates the statement `if (x=10)` as follows: 10 is assign
 --
 
 [float]
-=== See also
+=== Zobacz także
 
 [role="language"]
 
