@@ -16,7 +16,7 @@ Odczytuje wartość z określonego styku analogowego. Płytki Arduino posiadają
 
 Zakres wejściowy można zmienić za pomocą link:../analogreference[analogReference()], podczas gdy dokładność może być zmieniona (tylko dla płytek Zero, Due i MKR) za pomocą link:../../zero-due-mkr-family/analogreadresolution[analogReadResolution()].
 
-Płytki oparte na ATmega (UNO, Nano, Mini, Mega) potrzebują około 100 milisekund (0,0001s) na odczyt wejścia analogowego, więc maksymalna szybkość odczutu wynosi około 10.000 razy na sekundę.
+Płytki oparte na ATmega (UNO, Nano, Mini, Mega) potrzebują około 100 mikrosekund (0,0001s) na odczyt wejścia analogowego, więc maksymalna szybkość odczutu wynosi około 10.000 razy na sekundę.
 
 [options="header"]
 |===================================================
